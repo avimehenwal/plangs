@@ -82,13 +82,13 @@ module.exports = {
         // shortname: process.env.DISQUS_ShortName,
       },
       // Calssification and Taxonomy
-      directories: [
-        { id: 'post', dirname: '_posts', path: '/', layout: 'MyIndexPost',
-          itemLayout: 'MyPost',
-          pagination: { lengthPerPage: 2 },
-        },
-        { id: 'guide', dirname: 'guide', path: '/guide', },
-      ],
+      // directories: [
+      //   { id: 'post', dirname: '_posts', path: '/', layout: 'MyIndexPost',
+      //     itemLayout: 'MyPost',
+      //     pagination: { lengthPerPage: 2 },
+      //   },
+      //   { id: 'guide', dirname: 'guide', path: '/guide', },
+      // ],
     }],
     [ '@vuepress/google-analytics', { 'ga': process.env.GA } ],
     ['vuepress-plugin-reading-time', {
