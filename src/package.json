@@ -1,0 +1,9 @@
+{
+  "name": "@avi/javascript",
+  "version": "1.0.0",
+  "description": "javascript practise",
+  "main": "index.js",
+  "repository": "https://github.com/avimehenwal/javascript",
+  "author": "Avi Mehenwal",
+  "license": "MIT"
+}
