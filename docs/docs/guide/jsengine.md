@@ -64,7 +64,7 @@ int x = 17;
 
 * Can add / delete anytime, do not have to declare beforehand
 
-<<< @/../src/objects.js#snippet{1}
+<<< @/../src/objects.js#snippet
 
 Why json are good?
 :   sent over network all the time. API responses
