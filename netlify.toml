@@ -1,0 +1,6 @@
+[build]
+  base = "docs/"
+  command = "yarn build"
+  publish = ".vuepress/dist"
+
+[context.deploy-preview]

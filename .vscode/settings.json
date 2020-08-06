@@ -18,6 +18,7 @@
         "release",
         "vscode",
         "npm",
-        "vuepress"
+        "vuepress",
+        "netlify"
     ]
 }
