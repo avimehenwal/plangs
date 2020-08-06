@@ -41,7 +41,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help me improve this page!',
     lastUpdated: true,
-    logo: '/abucoins.svg',
+    logo: '/svg/js.svg',
     // displayAllHeaders: true,               // Default: false
     activeHeaderLinks: true,
     sidebar: 'auto',
