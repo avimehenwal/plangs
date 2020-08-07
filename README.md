@@ -1,4 +1,5 @@
 [![badge1][badge1-img]][link1]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2d97fd4-fb4f-4021-8d89-183e59a76d22/deploy-status)](https://app.netlify.com/sites/javascript-avi/deploys)
 
 [badge1-img]: https://img.shields.io/badge/avi-mehenwal-green
 [link1]: https://github.com/avimehenwal
@@ -38,8 +39,8 @@ MIT
 ## :cyclone: References / Resources
 
 
-[url]: liveLink
-[issue]: issue
+[url]: https://javascript-avi.netlify.app/
+[issue]: https://github.com/avimehenwal/javascript/issues
 [changelog]: ./CHANGELOG.md
 
 ---

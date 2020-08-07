@@ -20,6 +20,7 @@ tags:
 * https://v8.dev/
 * https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 * https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=javascript&btnG=
+* [Javascript Reference MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 
 ## List of Topics
