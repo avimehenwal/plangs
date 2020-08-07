@@ -157,15 +157,15 @@ module.exports = {
         defaultTitle: '',
       },
     ],
-    [ // DOESNT WORK, want to put title(author name) after main content
+    [
       'vuepress-plugin-container',
       {
         type: 'quote',
         defaultTitle: 'Anonymous',
-        before: info => `<div class="quote">`,
-        after: info => `<p class="title">${info}</p></div>`,
+        before: '<article class="quote"><div class="body">',
+        after: info => `</div><footer class="author">~ ${info}</footer></article>`,
       },
-    ]
+    ],
   ],
   markdown: {
     // options for markdown-it-anchor
@@ -177,7 +177,9 @@ module.exports = {
       md.use(require('markdown-it-container'))
       md.use(require('markdown-it-footnote'))
       md.use(require('markdown-it-deflist'))
+      md.use(require('markdown-it-imsize'))
       md.use(require('markdown-it-emoji'))
+      md.use(require('markdown-it-todo'))
       md.use(require('markdown-it-abbr'))
       md.use(require('markdown-it-mark'))
       md.use(require('markdown-it-sup'))

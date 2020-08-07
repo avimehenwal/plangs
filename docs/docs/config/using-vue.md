@@ -11,6 +11,14 @@ tags:
 
 <TagLinks />
 
+<Card />
+
+<v-chip class="ma-2" > Default </v-chip>
+<v-chip class="ma-2" color="primary" > Primary </v-chip>
+<v-chip class="ma-2" color="secondary" > Secondary </v-chip>
+<v-chip class="ma-2" color="red" text-color="white" > Red Chip </v-chip>
+<v-chip class="ma-2" color="green" text-color="white" > Green Chip </v-chip>
+
 * Create scaffold from installed starter-kits. <Badge type="warning" vertical="middle" text="For Example," /> `yarn create vuepress docs`
 * The `z-index` property specifies the stack order of an element.
 * ==Coolest== color combinations

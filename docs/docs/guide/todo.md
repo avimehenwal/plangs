@@ -48,4 +48,9 @@ tags:
 
 * https://fhinkel.rocks/
 
+## Styles
+
+* https://codepen.io/geoffgraham/embed/GXoOdK?height=300&theme-id=1&slug-hash=GXoOdK&default-tab=result&user=geoffgraham&pen-title=Link%20Effectz%20-%20Background%20on%20hover&name=cp_embed_6#result-box
+
+
 <Footer />
