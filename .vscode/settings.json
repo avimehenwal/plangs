@@ -19,6 +19,7 @@
         "vscode",
         "npm",
         "vuepress",
-        "netlify"
+        "netlify",
+        "ES6"
     ]
 }

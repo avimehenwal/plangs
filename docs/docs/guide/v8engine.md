@@ -16,6 +16,8 @@ tags:
 v8 is Javascript runtime in chrome and nodejs
 :::
 
+![v8 javascript engine logo](/svg/v8.svg)
+
 * Asynchronous IO is based in Event Loops
   * use `libuv` for that
 * 100k lines of JS and C++ code, glue between `libuv` and `v8`
@@ -62,5 +64,53 @@ the standard distinguishes automatic and dynamic storage duration. Local variabl
 
 * node
 * electron
+
+## Official documentation
+
+* If you are a C++ developer you can use v8 in your Application
+* How javascript is used?
+  * Manupulate DOM
+  * v8 exposes all datatypes, operators, functions and objects as specified in ECMAScript standard
+* Uses ==Code Caching Technique==
+  * cached data is availble to seperate v8 instance as well
+  * `v8::ScriptCompiler::Source::GetCachedData`
+
+```mermaid
+graph LR
+A(javascript):::yellow
+B(webAssembly):::orange
+subgraph Just_In_Time_Compiler
+  C(Baseline compiler):::purple
+  D(Optimization compiler):::blue
+  F([Garbage Collector]):::yellow
+end
+E(Machinecode):::green
+A & B --> C --> D --> E
+D --> C
+classDef green fill:#1f9,stroke-width:0px;
+classDef orange fill:#f96,stroke-width:0px;
+classDef yellow fill:#FFE873,stroke-width:0px;
+classDef blue fill:#b8d4ff,stroke-width:0px;
+classDef purple fill:#f9f,stroke:#333,stroke-width:0px;
+click C "https://v8.dev/" "Click to open wikipedia"
+click D "https://v8.dev/" "Click to open wikipedia"
+```
+
+JIT Units | Codenames
+----------|------------
+Garbage Collector   | Orinoco
+Baseline Compiler   | Ignition
+Optimization Compiler | Turbo Fan
+
+## Tracing
+
+```
+node --trace-events-enabled tracing.js
+```
+
+* How to view, read trace?
+  * Google chrome have built in trace viewer
+  * `chrome://tracing`
+
 
 <Footer />
