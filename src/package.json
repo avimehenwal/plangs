@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/avimehenwal/javascript",
   "author": "Avi Mehenwal",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon es6.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
