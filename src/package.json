@@ -7,9 +7,17 @@
   "author": "Avi Mehenwal",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon es6.js"
+    "dev": "nodemon es6.js",
+    "test": "jest"
   },
   "dependencies": {
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.1"
   }
 }
