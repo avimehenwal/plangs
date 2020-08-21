@@ -6,18 +6,24 @@ tags:
 - resolve
 ---
 
-# Promise
+# :handshake: Promise
 
 <TagLinks />
 
-* A PRomise Object can either succeees and return `resolve` or will fail and return `reject`
+* A Promise Object can either succeees and return `resolve` or will fail and return `reject`
 * Replaces functions accpeting `successCallback` and `FailureCallback`
 
-## How to write a `Promise` ?
+<Dot code="digraph { node [fontsize=24, colorscheme=set312, style=filled] node [fontname=Helvetica] Promise [fillcolor=2 shape=component width=5] Pending [fillcolor=9 shape=note] Resolve [fillcolor=7] Reject [fillcolor=4] edge [penwidth=2 style=dashed, color=grey] Promise -> Pending [label=asynchronousActivity] Pending -> Promise edge [style=solid color=black] Promise -> Resolve Promise -> Reject }" />
+
+## :clipboard: Unit Test Report
+
+![jest unittest report with code coverage](../.vuepress/public/img/tests/jest-report.png)
+
+## :pencil: How to write a `Promise` ?
 
 <<< @/../src/promise/promises.js
 
-## How to test Promises?
+## :factory: How to test Promises?
 
 <<< @/../src/promise/promises.test.js#snippet
 
