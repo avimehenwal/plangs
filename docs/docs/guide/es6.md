@@ -1,18 +1,18 @@
 ---
-title: ES6 EcmaScript 6
+title: ES6/ECMAScript 2015
 tags:
 - es6
-- ecma
 - script
-- 6
+- es2015
+- ecmascript2015
 ---
 
 # ES6 EcmaScript 6
 
 <TagLinks />
 
-<Dot />
 
+* [List of features in es6 or ECMAScript 2015](https://github.com/lukehoban/es6features/blob/master/README.md)
 * We can easily redeclare a variable. Its a big no no
 
 ```js
@@ -102,5 +102,8 @@ someList.foreach((item, index) => {
    1.  `.then`
    2.  `.catch`
 
+## :paperclip: References
+
+* [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html)
 
 <Footer />

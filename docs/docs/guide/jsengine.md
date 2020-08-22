@@ -175,9 +175,9 @@ function foo() {
 
 String values are not implementation dependent, according the ECMA-262 3rd Edition Specification, each character represents a single 16-bit unit of UTF-16 text:
 
-Would you agree that the statement "From a compiler's perspective, the best thing we can do is to write code that looks like it is statically typed", can be used as an argument in favour of TypeScript, which as I understand it naturally encourages us to write code that looks like it is statically typed. Hence, does writing our code using TypeScript make it more likely that the resulting JavaScript code can be optimised in a way that increases performance?
+Would you agree that the statement "From a compiler's perspective, the best thing we can do is to write code that looks like it is statically typed", can be used as an argument in favour of [TypeScript], which as I understand it naturally encourages us to write code that looks like it is statically typed. Hence, does writing our code using [TypeScript] make it more likely that the resulting JavaScript code can be optimised in a way that increases performance?
 
-Using that argument, can it therefore be inferred that "using TypeScript makes our apps faster"?
+Using that argument, can it therefore be inferred that "using [TypeScript] makes our apps faster"?
 
 
 ## V8 Flags
@@ -188,5 +188,10 @@ v8 flags  | Description
 `--print-bytecode`  | bytecode geenrated by interpreter
 `--trace-ic`        | different object types a call sites encounters
 `--trace-opt`, `--trace-depot` | which functions are (de)optimized
+
+
+
+[TypeScript]: ./typescript.md
+
 
 <Footer />

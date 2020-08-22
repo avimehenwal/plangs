@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "typescript examples",
+  "main": "lib/index.js",
+  "author": "avimehenwal",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc --watch",
+    "develop": "tsc -w & nodemon lib/example.js",
+    "start": "tsc && node lib/example.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "typescript": "^4.1.0-dev.20200821"
+  }
+}
