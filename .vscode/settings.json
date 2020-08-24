@@ -26,6 +26,7 @@
         "typescript",
         "guide",
         "jest",
-        "markdown"
+        "markdown",
+        "jsconsole"
     ]
 }

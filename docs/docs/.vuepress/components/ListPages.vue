@@ -9,7 +9,7 @@
 
     <!-- List Article Data -->
     <ol>
-      <li v-for="page in pages" :key="page">
+      <li v-for="page in pages" :key="page.key">
         <article>
           <h2>
             <router-link :to="page.path" tag="a">

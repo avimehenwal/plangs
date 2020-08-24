@@ -59,18 +59,9 @@ export default {
     mycolor: '#'+(Math.random()*0xFFFFFF<<0).toString(16)
   }),
   mounted () {
-    // this.allTags()
     // document.body.style.background = this.mycolor;
   },
   methods: {
-    allTags() {
-      let tags = {}
-      this.$site.pages.forEach(page => {
-        if ("frontmatter" in page) {
-          console.log(page.title);
-        }
-      })
-    },
     newColor () {
       this.mycolor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
       // document.body.style.background = this.mycolor;

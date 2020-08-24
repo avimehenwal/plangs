@@ -2,7 +2,6 @@
 title: proto
 tags:
 - proto
-- __proto__
 ---
 
 # :sound: __proto__
