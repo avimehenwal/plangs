@@ -8,15 +8,17 @@ tags:
 - runtime
 ---
 
-# v8 Engine
+# :small_airplane: v8 Engine
 
 <TagLinks />
 
+
 ::: quote
+![v8 javascript engine logo](/svg/v8.svg =150x150)
+
 v8 is Javascript runtime in chrome and nodejs
 :::
 
-![v8 javascript engine logo](/svg/v8.svg)
 
 * Asynchronous IO is based in Event Loops
   * use `libuv` for that
@@ -34,7 +36,7 @@ v8 is Javascript runtime in chrome and nodejs
   * https://www.infoq.com/news/2020/02/v8-webassembly-simd/
   * https://www.google.com/search?q=javascript+v8&newwindow=1&sxsrf=ALeKk03qxPq35f3dJ7-IpoVOJFVTlheQSA:1596773429800&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj2n8fInIjrAhVDNOwKHUlvCq0Q_AUoBHoECEIQBg&biw=1294&bih=641
 
-::: tip not in v8
+::: warning not in v8
 1. Document Object Model datastructure
    1. responsibility of browser
 2. No File System access
@@ -53,7 +55,7 @@ v8 is Javascript runtime in chrome and nodejs
 * since node 7 use devtools and CDP protocol for debugging
 * node is a first class citizen in v8 now
 
-## Heap vs Stack
+## :card_file_box: Heap vs Stack
 
 the standard distinguishes automatic and dynamic storage duration. Local variables have automatic storage duration and compilers store them on the stack. Objects with dynamic memory allocation (created with new) are stored on the free store, conventionally referred to as the heap. In languages that are not garbage-collected, objects on the heap lead to memory leaks if they are not freed.
 
@@ -102,7 +104,7 @@ Garbage Collector   | Orinoco
 Baseline Compiler   | Ignition
 Optimization Compiler | Turbo Fan
 
-## Tracing
+## :chart_with_downwards_trend: Tracing
 
 ```
 node --trace-events-enabled tracing.js

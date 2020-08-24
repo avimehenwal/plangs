@@ -7,7 +7,7 @@ tags:
 - javascript
 ---
 
-# JS Engine
+# :ferris_wheel: JS Engine
 
 <TagLinks />
 
@@ -66,10 +66,10 @@ int x = 17;
 
 <<< @/../src/objects.js#snippet
 
-Why json are good?
+Why JSON is good?
 :   sent over network all the time. API responses
 
-    Its hard to know the structure / shape of json at clients so dynamically types
+    Its hard to know the structure / shape of JSON at clients so dynamically types
     language makes sense. Hence javascript Objects
 
     But it supporting dynimically types makes compiler harder
@@ -112,11 +112,12 @@ B(Parser):::orange
 D{Ignition}:::blue
 E(Bytecode):::yellow
 F(TurboFan):::green
-G(Optimized machien code):::purple
+G(Optimized machine code):::purple
 
 A --> B -- AST --> D --> E
 F --> G
-D -.- F
+D ==> F
+F ==> D
 G -.- E
 
 classDef green fill:#1f9,stroke-width:0px;
@@ -180,7 +181,7 @@ Would you agree that the statement "From a compiler's perspective, the best thin
 Using that argument, can it therefore be inferred that "using [TypeScript] makes our apps faster"?
 
 
-## V8 Flags
+## :black_flag: V8 Flags
 
 v8 flags  | Description
 ----------|-------------
@@ -193,5 +194,6 @@ v8 flags  | Description
 
 [TypeScript]: ./typescript.md
 
+*[JSON]: Javascript Object Notation, standard 5
 
 <Footer />

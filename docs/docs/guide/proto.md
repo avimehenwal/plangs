@@ -1,15 +1,15 @@
 ---
-title: __proto__
+title: proto
 tags:
 - proto
 - __proto__
 ---
 
-# __proto__
+# :sound: __proto__
 
 <TagLinks />
 
-## What the hell is __proto__ ?
+## :eye_speech_bubble: What the hell is __proto__ ?
 
 `__proto__` is the actual object that is used in the lookup chain to resolve methods, etc.
 `prototype` is the object that is used to build `__proto__` when you create an object with new.

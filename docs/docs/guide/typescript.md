@@ -40,7 +40,7 @@ How do I compile and run typescript while developing to get realtime feedback?
   * objects,
   * class
 
-<<< @/../src/typescript/src/example.ts{32}
+<<< @/../src/typescript/src/example.ts{33}
 
 
 ## :newspaper_roll: might be interesting

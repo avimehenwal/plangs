@@ -7,7 +7,7 @@ tags:
 - ecmascript2015
 ---
 
-# ES6 EcmaScript 6
+# :notebook_with_decorative_cover: ES6 EcmaScript 6
 
 <TagLinks />
 

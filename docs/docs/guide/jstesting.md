@@ -1,15 +1,16 @@
 ---
-title: Jest JS Testing
+title: Javascript Testing
 tags:
-- jest
 - testing
 - javascript
 - spyon
 - mocking
 - stub
+- jest
+- faking
 ---
 
-# Jest JS Testing
+# :white_check_mark: Javascript Testing
 
 <TagLinks />
 
@@ -17,7 +18,7 @@ tags:
 * ==Test Stubs== are mocks that helps you test. <Badge type="tip" vertical="middle" text="For Example," /> interface for `sendEmail`
 * ==mock objects== are objects where you actually put asserts on test to determine test pass/fail status. <Badge type="tip" vertical="middle" text="For Example," /> test if `sendEmail` service wrote a success/failure log. We will mock `logWriter` in this scenario.
 
-## :family_woman_woman_girl_boy: Why Mocking
+## :monkey: Why Mocking
 
 * Goal of mocking to avoid using any ==external service==. Why would we want to do that?
   * to make tests run faster
@@ -30,6 +31,24 @@ tags:
   * what if databse is full?
   * what if delays are $> 5$ sec?
   *what if network is super slow? Or no network at all situation.
+
+## :dolls: Mock Object
+
+* Track function calls, #instances created, results returned etc.
+* Erase the actual implementation of a function
+* what to assert on? values?
+  * `expect(value).toMatchSnapshot()`
+
+![jest mocking function mock property](../.vuepress/public/img/tests/mocking_fn_properties.png)
+
+```ts
+let car = 'some cat'
+console.log(car);
+
+```
+
+<<< @/../src/mock/mock.test.js
+
 
 ## :timer_clock: Timer Functions
 
@@ -51,7 +70,7 @@ can be called before each test manually or with a setup function such as `before
 
 * Callback is called after 1 second?
 
-## :question: Good Questions
+## :cloud_with_rain: Good Questions
 
 What is the difference [b/w jest.fn() and jest.spyOn()?](https://stackoverflow.com/questions/57643808/what-is-the-difference-between-jest-fn-and-jest-spyon-methods-in-jest)
 :   They both does the same job but in different ways.

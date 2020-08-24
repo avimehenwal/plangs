@@ -13,16 +13,18 @@ tags:
 <TagLinks />
 
 
+* Originally JS had no concept of modules and `export`, `import`
+  * dark ages of JavaScript
 * Starting with [ECMAScript 2015](https://babeljs.io/docs/en/learn/), JavaScript has a concept of modules.
-* Modules have their own namespaces, unless they are exported
+* Modules have their own name-spaces, unless they are exported
 
-## :: Interface
+## :vertical_traffic_light: Interface
 
 > shape of data
 
 * [Interface Example](https://www.typescriptlang.org/docs/handbook/interfaces.html#our-first-interface)
 
-## :question: Good questions
+## :cloud_with_lightning: Good questions
 
 When should I use curly braces for ES6 import?
 :  default import vs Named import
@@ -55,8 +57,9 @@ When should I use curly braces for ES6 import?
 10. Promises - asynchronous programming
 
 
-## :earth_americas: Resourcces
+## :earth_americas: Resources
 
 * https://www.typescriptlang.org/docs/handbook/modules.html
 
 <Footer />
+

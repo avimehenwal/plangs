@@ -1,3 +1,3 @@
-# Javascript
+# :books: Contents
 
 <ListPages />

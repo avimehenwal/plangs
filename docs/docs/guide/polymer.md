@@ -7,7 +7,7 @@ tags:
 - polymerjs
 ---
 
-# PolymerJS
+# :black_joker: PolymerJS
 
 <TagLinks />
 

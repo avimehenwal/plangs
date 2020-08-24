@@ -6,7 +6,7 @@ tags:
 - v8
 ---
 
-# Event Loop
+# :loop: Event Loop
 
 <TagLinks />
 

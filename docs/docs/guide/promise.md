@@ -10,6 +10,7 @@ tags:
 
 <TagLinks />
 
+* A way to deal with asynchronous events
 * A Promise Object can either succeees and return `resolve` or will fail and return `reject`
 * Replaces functions accpeting `successCallback` and `FailureCallback`
 

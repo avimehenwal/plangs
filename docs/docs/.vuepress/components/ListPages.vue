@@ -92,6 +92,7 @@ ol
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+
 section > ol > li
   counter-increment: my-awesome-counter;
   display: flex;
@@ -99,6 +100,7 @@ section > ol > li
   width: 50%;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+
 section > ol > li::before
   content: "0" counter(my-awesome-counter);
   font-weight: bold;
@@ -106,4 +108,5 @@ section > ol > li::before
   margin-right: 2rem;
   font-family: 'Abril Fatface', serif;
   line-height: 1;
+
 </style>

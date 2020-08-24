@@ -5,7 +5,7 @@ tags:
 - desctructure
 ---
 
-# Desctructuring
+# :construction_worker_woman: Desctructuring
 
 <TagLinks />
 
@@ -31,7 +31,7 @@ cons a = alphabet[0]
 const [a,, c, ...rest] = alphabet
 
 // combining Lists
-const combinedArray = [..alphabet, ...numbers]
+const combinedArray = [...alphabet, ...numbers]
 const combinedArray = alphabet.concat(numbers)
 ```
 

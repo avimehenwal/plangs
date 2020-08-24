@@ -3,17 +3,20 @@ title: JIT Compiler
 tags:
 - compiler
 - jit
+- v8
 ---
 
-# JIT Compiler
+# :hourglass: JIT Compiler
 
 <TagLinks />
 
 > dynamic translation or run-time compilations or just in time compilations
 > or runtime systems
 
-* compilation during the execution of program. 1 step
-* In contrast to Ahead-Of-Time compiler for C/C++, java etc.
+* compilation during the execution of program in 1 step
+* In contrast to ==Ahead Of Time aka AOT== compiler for C/C++, java etc. where compilation happens in 2 stages
+  * 1. compile stage
+  * 2. Run/execute stage
 * [More on compilers](https://avi-python.netlify.app/Tutorials/07_compiler.html#types-of-compilers)
 
 ```mermaid
@@ -37,8 +40,8 @@ click C "https://en.wikipedia.org/wiki/Just-in-time_compilation" "Click to open 
   * Variables are expanded to memory references
 * Runtime systems
   * Typically the runtime system will have some responsibility for setting up and managing the **stack** and **heap**, and may include features such as **garbage collection**, **threads** or other dynamic features built into the language
-* A programming language consists of a **grammar/syntax** plus an **execution model**. The execution model specifies the behavior of elements of the language.
-  * For example, **Operational Semantics** is one method of specifying a language's execution model.
+* A programming language consists of a **grammar/syntax** plus an [execution model](https://en.wikipedia.org/wiki/Execution_model). The execution model specifies the behavior of elements of the language.
+  * For example, [Operational Semantics](https://en.wikipedia.org/wiki/Operational_semantics) is one method of specifying a language's execution model.
 * In computing, a virtual machine (VM) is an emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.
   * Binary File - non-text file
 
@@ -57,5 +60,8 @@ libuv follows [Reactor Pattern](https://en.wikipedia.org/wiki/Reactor_pattern)
   * The WHATWG was formed in response to the slow development of World Wide Web Consortium (W3C) Web standards and W3C's decision to abandon HTML in favor of XML-based technologies. ... This spurred a renewed attempt to allow the W3C and the WHATWG to work together on specifications.
 
 [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgithub.com%2Favimehenwal&submit=Check)
+
+*[IR]: Intermediate Representation
+
 
 <Footer />

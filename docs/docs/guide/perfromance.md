@@ -5,7 +5,7 @@ tags:
 - node
 ---
 
-# Performance
+# :bar_chart: Performance
 
 <TagLinks />
 
