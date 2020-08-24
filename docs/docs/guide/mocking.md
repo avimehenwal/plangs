@@ -4,6 +4,7 @@ tags:
 - mocking
 - stub
 - faking
+- jest
 ---
 
 # Mocking
@@ -12,6 +13,8 @@ tags:
 
 * Track function calls, #instances created, results returned etc.
 * Erase the actual implementation of a function
+* what to assert on? values?
+  * `expect(value).toMatchSnapshot()`
 
 ![jest mocking function mock property](../.vuepress/public/img/tests/mocking_fn_properties.png)
 
