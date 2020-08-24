@@ -3,4 +3,4 @@
   command = "yarn build"
   publish = "docs/.vuepress/dist"
 
-[context.deploy-preview]
+# [context.deploy-preview]
