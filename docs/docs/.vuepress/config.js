@@ -24,6 +24,24 @@ const extendsNetworks = {
 }
 
 module.exports = {
+  /** NOTE
+   * pug template loader
+   * scss, sass, stylus, less has been built in VuePress
+   */
+  chainWebpack: config => {
+    config.module
+    .rule('pug')
+    .test(/\.pug$/)
+    .use('pug-plain-loader')
+    .loader('pug-plain-loader')
+    .end()
+  },
+  /** NOTE enable webpack source-maps for vscode debugging
+   * https://vuepress.vuejs.org/config/#configurewebpack
+   */
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   title: name,
   description: description,
   head: [
@@ -49,6 +67,7 @@ module.exports = {
     searchPlaceholder: 'Search...',
     smoothScroll: true,
     nav: [
+      { text: 'Tags', link: '/tags.html', },
       { text: 'Guide', link: '/guide/', },
       { text: 'Config', link: '/config/' },
     ],

@@ -1,7 +1,9 @@
 <template>
   <section>
     <div>
-      <Badge vertical="middle" type="tip" :text="numArticles"/>
+      <strong>
+        <Badge vertical="middle" type="tip" :text="numArticles"/>
+      </strong>
     </div>
     <br><br>
 
