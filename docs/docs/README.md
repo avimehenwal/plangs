@@ -2,14 +2,14 @@
 home: true
 heroImage: /svg/js.svg
 tagline: javascript practise notes
-actionText: Quick Start →
+actionText: Start →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
+- title: ⏱ Asynchronous Programming
+  details: respons to async events and callbacks
+- title: 🔢 Dynamically Typed
+  details: can use types versions using babel and typescript
+- title: 🔀 Client-side + Server-side
+  details: programm both client and serve using same language
 footer: Made by Avi Mehenwal with ❤️
 ---
