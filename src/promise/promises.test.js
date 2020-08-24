@@ -43,7 +43,8 @@ describe('Promise test suite', () => {
 // #region snippet
 
 
-/**
+/** NOTE
+ * 
  * In JavaScript, there are six falsy values:
  * false, 0, '', null, undefined, and NaN.
  * Everything else is truthy.

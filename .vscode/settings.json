@@ -24,6 +24,7 @@
         "javascript",
         "graphics",
         "typescript",
-        "guide"
+        "guide",
+        "jest"
     ]
 }

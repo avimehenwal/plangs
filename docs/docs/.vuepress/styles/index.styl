@@ -105,3 +105,24 @@ $vssue-text-color ?= $textColor
 $vssue-border-color ?= $borderColor
 $vssue-breakpoint-mobile ?= $MQMobile
 
+/** ANCHOR
+ * code block syntax block styling
+ */
+div[class*="language-"]::before
+    position: absolute;
+    z-index: 3;
+    top: 1em;
+    right: 1em;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.4);
+    padding: 2px 10px;
+    color: white;
+    border-radius: 2px;
+    background: $accentColor;
+
+div.language-js::before
+    color: $jsBlack
+    background: $jsYellow;
+
+div.language-ts::before
+    background: $tsBlue;

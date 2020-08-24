@@ -48,6 +48,19 @@ How do I compile and run typescript while developing to get realtime feedback?
 * [tslint is being merged to eslint](https://github.com/palantir/tslint/issues/4534)
 * [babel vs tsc?](https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html)
 
+::: tip babela and typescript
+Babel 7 has built-in TypeScript syntax support.
+
+This means that projects using Babel can now use TypeScript, without ever needing to complicate their builds with the TypeScript compiler.
+:::
+
+But what are the differences between using Babel and the TypeScript compiler? [And should you use Babel or TypeScript for your next project?](https://blog.logrocket.com/choosing-between-babel-and-typescript-4ed1ad563e41/#:~:text=TypeScript%20by%20default%20compiles%20an,widespread%20is%20probably%20const%20enums%20.)
+:   babel vs typescript compiler
+
+    1. TypeScript by default compiles an entire project at once, while Babel only compiles one file at a time.
+
+
+
 ## :closed_book References
 
 <Footer />
