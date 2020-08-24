@@ -3,24 +3,25 @@
     <div>
       <Badge vertical="middle" type="tip" :text="numArticles"/>
     </div>
+    <br><br>
 
     <!-- List Article Data -->
     <ol>
       <li v-for="page in pages" :key="page">
         <article>
-          <h3>
+          <h2>
             <router-link :to="page.path" tag="a">
               {{ page.title }}
               <span>
                 <span class="lastupdated">
                   {{ page.readingTime.text }}
+                  <!-- <div>
+                    {{ page.lastUpdated }}
+                  </div> -->
                 </span>
-                <div class="lastupdated">
-                  {{ page.lastUpdated }}
-                </div>
               </span>
             </router-link>
-          </h3>
+          </h2>
 
           <ul class="menu">
             <li v-for="item in page.frontmatter.tags" :key="item">
@@ -62,17 +63,45 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.lastupdated {
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+.lastupdated
     // margin-top: 1px
     font-size: 0.5em;
-    position: absolute;
+    // position: absolute;
+    // text-align: end
     padding-left: 5px;
     font-style: normal;
     color: lighten($jsBlack, 50%);
-}
-ul.menu li {
+
+ul.menu > li
   display:inline;
   padding: 0px 1px;
   margin: 0px 1px;
-}
+
+/** NOTE awesome number list
+ * using flex-box
+ */
+
+ol
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+section > ol > li
+  counter-increment: my-awesome-counter;
+  display: flex;
+  flex 100%
+  width: 50%;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+section > ol > li::before
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 1;
 </style>
