@@ -70,6 +70,7 @@ module.exports = {
       { text: 'Tags', link: '/tags.html', },
       { text: 'Guide', link: '/guide/', },
       { text: 'Tutorials', link: '/tutorial/', },
+      { text: 'Blog', link: '/blog/', },
       { text: 'Config', link: '/config/' },
     ],
   },
@@ -85,6 +86,9 @@ module.exports = {
     "img-lazy",
     ['web-monetization', { 'address': process.env.ILP }],
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
+    /**
+     * ANCHOR vuepress-blog
+     */
     ['@vuepress/blog', {
       // mailchimp email marketting service
       newsletter: { endpoint: process.env.MailChimp },
@@ -104,11 +108,33 @@ module.exports = {
       },
       // Calssification and Taxonomy
       // directories: [
-      //   { id: 'post', dirname: '_posts', path: '/', layout: 'MyIndexPost',
-      //     itemLayout: 'MyPost',
-      //     pagination: { lengthPerPage: 2 },
+      //   {
+      //     id: 'post',
+      //     dirname: 'blogposts',
+      //     path: '/blog',
+      //     itemPermalink: '/blog/:year/:month/:day/:slug',
+          // layout: 'MyIndexPost',
+          // itemLayout: 'MyPost',
+          // pagination: { lengthPerPage: 2 },
+        // },
+        // { id: 'guide', dirname: 'guide', path: '/guide', },
+      // ],
+      /**
+       * ANCHOR frontmatter
+       */
+      // frontmatters: [
+      //   {
+      //     // Unique ID of current classification
+      //     id: 'tag',
+      //     // Decide that the frontmatter keys will be grouped under this classification
+      //     keys: ['tag'],
+      //     // Path of the `entry page` (or `list page`)
+      //     path: '/tag/',
+      //     // Layout of the `entry page`
+      //     layout: 'Tags',
+      //     // Layout of the `scope page`
+      //     scopeLayout: 'Tag'
       //   },
-      //   { id: 'guide', dirname: 'guide', path: '/guide', },
       // ],
     }],
     [ '@vuepress/google-analytics', { 'ga': process.env.GA } ],
