@@ -69,6 +69,7 @@ module.exports = {
     nav: [
       { text: 'Tags', link: '/tags.html', },
       { text: 'Guide', link: '/guide/', },
+      { text: 'Tutorials', link: '/tutorial/', },
       { text: 'Config', link: '/config/' },
     ],
   },
@@ -82,6 +83,7 @@ module.exports = {
     "reading-progress",
     "@vuepress/pwa",
     "img-lazy",
+    ['web-monetization', { 'address': process.env.ILP }],
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['@vuepress/blog', {
       // mailchimp email marketting service

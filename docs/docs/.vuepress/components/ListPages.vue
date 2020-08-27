@@ -43,7 +43,10 @@ export default {
       pages: [],
     }
   },
-  mounted() {
+  /** NOTE
+   * if used in mounted() hook, the component is rendered properly in static build
+   */
+  created() {
     this.$site.pages.forEach(page => {
       if (page.path !=this.currentPath && page.path.includes(this.currentPath)) {
         this.pages.push(page)

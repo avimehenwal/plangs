@@ -18,6 +18,15 @@ tags:
 * Starting with [ECMAScript 2015](https://babeljs.io/docs/en/learn/), JavaScript has a concept of modules.
 * Modules have their own name-spaces, unless they are exported
 
+```ts
+export = className;
+
+// compiles to
+module.exports = className;
+```
+
+[Difference b/w module.exports.foo and exports.foo ?](https://blog.tableflip.io/the-difference-between-module-exports-and-exports/)
+
 ## :vertical_traffic_light: Interface
 
 > shape of data
@@ -60,6 +69,7 @@ When should I use curly braces for ES6 import?
 ## :earth_americas: Resources
 
 * https://www.typescriptlang.org/docs/handbook/modules.html
+* https://stackoverflow.com/questions/12696236/module-exports-in-typescript
 
 <Footer />
 

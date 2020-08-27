@@ -80,5 +80,15 @@ What is the difference [b/w jest.fn() and jest.spyOn()?](https://stackoverflow.c
     `jest.fn()` - lets us create mock object from scratch. Usually we just plug in the return values without
     caring about the implementation.
 
+Difference between `jest.fn()` and `jest.mock()`?
+:   jest        | description
+    ------------|----------------------------
+    [jest.fn()](https://jestjs.io/docs/en/jest-object#jestfnimplementation)                 | mocks objects and functions
+    [jest.mock()](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options) | mocks a module
+
+How to mock JSON imports?
+:   Use [moduleNameMapper](https://jestjs.io/docs/en/configuration#modulenamemapper-objectstring-string--arraystring)
+    in settings to mock a json file import.
+
 
 <Footer />

@@ -1,0 +1,18 @@
+digraph {
+  splines=FALSE
+  bgcolor=none
+
+  node [fontsize=24, colorscheme=set312, style=filled fontname=Helvetica shape=box]
+
+  Client [color=2 shape=ellipse]
+  Dependencies [color=5]
+  eventListener [color=3]
+  sendEmail [color=1]
+
+  /* Relationships */
+  Dependencies -> Client [label=inject]
+  eventListener -> Client [label=as]
+  sendEmail -> Client [label=service]
+  /* Ranks */
+  { rank=same; Client; };
+}
