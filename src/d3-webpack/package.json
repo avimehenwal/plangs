@@ -1,0 +1,21 @@
+{
+  "name": "d3-webpack",
+  "version": "1.0.0",
+  "description": "d3 document in webpack project",
+  "main": "index.js",
+  "author": "avimehenwal",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --open",
+    "debug": "webpack --config webpack.config.js --watch --debug --progress"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^4.4.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

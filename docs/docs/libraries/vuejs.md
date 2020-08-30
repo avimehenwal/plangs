@@ -62,6 +62,6 @@ function userSorting () {
 * Why need/use it? Isnt plain js enough?
   * built-in reactivity
   * templating engine
-*
+* How to Directly manupulate vue data from devtool console?
 
 <Footer />
