@@ -27,6 +27,7 @@
         "guide",
         "jest",
         "markdown",
-        "jsconsole"
+        "jsconsole",
+        "plugin"
     ]
 }
