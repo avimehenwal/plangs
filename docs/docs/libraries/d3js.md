@@ -21,4 +21,9 @@ $$D3 = Data \, Driven \, Documents$$
 * `append()` add all those missing elements
 * general library for  manupulating docuemnts, text, numers, charts, shapes
 
+## References
+
+* https://d3js.org/
+* 
+
 <Footer />

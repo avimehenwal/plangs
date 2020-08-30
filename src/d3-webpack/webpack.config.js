@@ -11,15 +11,45 @@ module.exports = {
     filename: 'app.js'
   },
   mode: 'development',
+  /**
+   * STUB
+   * in webpack 4 loaders is now rules
+   * https://webpack.js.org/concepts/loaders/#example
+   */
+  module: {
+    rules: [
+      // https://webpack.js.org/loaders/babel-loader/
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            /** FIXME
+             * TypeError: Cannot read property 'bindings' of null
+             * https://github.com/babel/babel/issues/8908
+             */
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'd3-webapp',
+      /**
+       * TODO
+       * template variable to set title from webpack config
+       */
+      // title: 'd3-webapp',
       filename: 'index.html',
+      template: './index.html',
+      inject: 'body'
     })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000
-  }
+  },
 };
