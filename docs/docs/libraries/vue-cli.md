@@ -1,5 +1,5 @@
 ---
-title: @vue/cli
+title: vue/cli
 tags:
 - vue
 - cli

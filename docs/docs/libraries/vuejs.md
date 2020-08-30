@@ -53,6 +53,15 @@ function userSorting () {
 * you can have multiple instances of VUE object on page to do multiple seperate things.
   * `app.todo.push({ text: 'new item' })`
 
+## Enterprise App
+
+* is a timer app classify as enterprise app?
+* Is a apple watch app a enterprise app?
+* At what time an app becomes an enterprise app?
+
+Code is like comedy, the more you have to explain it, less funny it is.
+
+![milestones in web technologies](../.vuepress/public/img/browser/web-technologies-milestones.png)
 
 ### Questions
 
@@ -63,5 +72,12 @@ function userSorting () {
   * built-in reactivity
   * templating engine
 * How to Directly manupulate vue data from devtool console?
+* [How to access vue instance from console?](https://forum.vuejs.org/t/how-to-access-vue-from-chrome-console/3606)
+
+## Issues
+
+* [devtools not working with vue3](https://github.com/vuejs/vue-devtools/issues/1244)
+* [__VUE_DEVTOOLS_APP_RECORD__](https://github.com/vuejs/vue-devtools/issues/1246)
+
 
 <Footer />
