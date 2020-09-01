@@ -19,6 +19,13 @@ body {
   text-align: center;
 }
 
+/* FIXME not working
+ * Hoverable table
+ */
+tr:hover td:hover {
+  background-color:#c6cbd1 !important
+}
+
 header,
 footer {
   background-color: rgb(167, 227, 227);
