@@ -30,13 +30,16 @@ export default {
 
 <style scoped lang="stylus">
 /* * CSS rip page style effect at the bottom */
-article {
+article
   background: linear-gradient(lighten(#9198e5, 60%), pink);
   padding: 20px;
   position: relative;
-}
+  box-shadow: 10px 30px 20px grey;
+  transition: box-shadow .3s;
+  &:hover
+    box-shadow: -10px 30px 20px grey;
 
-article::after {
+article::after
   content: '';
   position: absolute;
   top: 100%;
@@ -45,5 +48,4 @@ article::after {
   width: 100%;
   background: url('/svg/rip.svg') bottom center;
   background-size: 150%;
-}
 </style>
