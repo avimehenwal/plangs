@@ -142,7 +142,7 @@ module.exports = {
       //   },
       // ],
     }],
-    [ '@vuepress/google-analytics', { 'ga': process.env.GA } ],
+    [ '@vuepress/google-analytics', { 'ga': 'UA-113741959-10' } ],
     ['vuepress-plugin-reading-time', {
       excludes: ['/about', '/tag/.*']
     }],

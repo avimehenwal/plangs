@@ -11,6 +11,8 @@
 
 :link: [Live Link][url]
 
+:star: [Live Link 2][url2]
+
 ## :wrench: Installation / How to run?
 
 ```
@@ -40,6 +42,7 @@ MIT
 
 
 [url]: https://javascript-avi.netlify.app/
+[url2]: https://avimehenwal.github.io/javascript/
 [issue]: https://github.com/avimehenwal/javascript/issues
 [changelog]: ./CHANGELOG.md
 

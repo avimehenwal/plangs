@@ -1,38 +1,49 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width="400"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
-      <v-card-title>Top 10 Australian beaches</v-card-title>
-    </v-img>
-
-    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
-
-    <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
-
-      <div>Whitsunday Island, Whitsunday Islands</div>
-    </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Share
-      </v-btn>
-
-      <v-btn
-        color="orange"
-        text
-      >
-        Explore
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+  <article :style="{ width: widthP}">
+      <slot>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ut! Debitis magnam, eligendi tempore iure temporibus quas possimus repudiandae reprehenderit laboriosam eius asperiores dicta nobis! Facilis, eveniet! Error, enim eos.
+      </slot>
+  </article>
 </template>
+
+<script>
+/** TODO
+ * [] add in-line svg so that fill color could match that of card
+ * [] configurable card color
+ * [x] slot to accept HTML body for card
+ * [x] linear gradient background
+ */
+export default {
+  props: {
+    width: {
+      type: String,
+      default: '50'
+    },
+  },
+  computed: {
+    widthP () {
+      return this.width + '%'
+    }
+  }
+}
+</script>
+
+<style scoped lang="stylus">
+/* * CSS rip page style effect at the bottom */
+article {
+  background: linear-gradient(lighten(#9198e5, 60%), pink);
+  padding: 20px;
+  position: relative;
+}
+
+article::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  background: url('/svg/rip.svg') bottom center;
+  background-size: 150%;
+}
+</style>

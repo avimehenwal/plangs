@@ -66,7 +66,6 @@ CSS Framework | Gzipped Size (**KB**) | Remark
 
 > navigation, typography, boxes, grid system, forms, tables , etc
 
-
 * HTML tags do not have any effect, CSS classnames controls all styles
 * `.block` $\rightarrow$ `.title` `.subtitle` - no padding
 * is-small, is-medium, is-large
@@ -82,7 +81,7 @@ CSS Framework | Gzipped Size (**KB**) | Remark
 * .pagination .pagination-previous .pagination-next .pagination-list
 * For blog post .level .level-left .level-item .field .control
 * Forms .label .input .select .textarea **Attched** .field .has-addons .control > .button
-* Grid system: .column 
+* Grid system: .column
 
 
 
