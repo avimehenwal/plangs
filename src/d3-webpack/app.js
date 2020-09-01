@@ -1,4 +1,5 @@
 import * as d3 from 'd3'
+import './styles.css';
 
 console.log('from app.js');
 // #keys in d3 object
@@ -49,13 +50,14 @@ function d3Bar(data) {
 }
 
 function d3Gallery (images) {
-  var width = document.querySelector("#gallery").clientWidth;
-  var height = document.querySelector("#gallery").clientHeight;
+  var width = document.querySelector(".gallery").clientWidth;
+  var height = document.querySelector(".gallery").clientHeight;
 
-  d3.select('#gallery')
+  d3.select('.gallery')
     .selectAll('img')
     .data(images)
     .enter()
+    .append('div').classed('gallery-item', true)
     .append('img').attr('src', image => image).attr('alt', image => image)
     // .attr('transform', 'rotate(180)')
 }
@@ -77,6 +79,24 @@ const images = importAll(require.context(
   'sync'                                  // mode sync | async
 ));
 console.log(images);
+
+/** Add images using web APIs */
+fetch("https://dog.ceo/api/breeds/image/random/10")
+  .then((response) => response.json())
+  .then((data) => data.message)
+  .then((arrayOfLinks) => addPhoto(arrayOfLinks))
+  .catch((e) => console.log(e));
+
+function addPhoto(links) {
+  let gallery= document.querySelector(".gallery");
+  for (let link of links) {
+    let image = document.createElement("img");
+    image.src = link;
+    gallery.appendChild(image);
+  }
+}
+
+
 
 /**
  * ANCHOR MAIN

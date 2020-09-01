@@ -19,4 +19,9 @@ tags:
 
 ![webpack compress images at runtime](../.vuepress/public/img/browser/webpack-png-2-webp.png)
 
+## Use cases
+
+1. Make a dynamic image gallery using `flex` and `grid`
+
+
 <Footer />

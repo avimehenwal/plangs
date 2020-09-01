@@ -47,6 +47,12 @@ module.exports = {
           }
         }],
       },
+
+      /** ANCHOR use css from a seperate file */
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   plugins: [
