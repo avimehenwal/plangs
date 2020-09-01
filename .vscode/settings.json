@@ -28,6 +28,7 @@
         "jest",
         "markdown",
         "jsconsole",
-        "plugin"
+        "plugin",
+        "webpack"
     ]
 }

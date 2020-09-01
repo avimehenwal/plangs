@@ -48,8 +48,39 @@ function d3Bar(data) {
     .style('height', data => (data.value * 15) + 'px')
 }
 
+function d3Gallery (images) {
+  var width = document.querySelector("#gallery").clientWidth;
+  var height = document.querySelector("#gallery").clientHeight;
 
-// MAIN
+  d3.select('#gallery')
+    .selectAll('img')
+    .data(images)
+    .enter()
+    .append('img').attr('src', image => image).attr('alt', image => image)
+    // .attr('transform', 'rotate(180)')
+}
+
+/**
+ * Load all images from a directory
+ * https://stackoverflow.com/questions/42118296/dynamically-import-images-from-a-directory-using-webpack
+ */
+const imageDir = './img';
+function importAll (r) {
+  return r.keys().map(r);
+};
+// https://webpack.js.org/guides/dependency-management/#require-context
+const images = importAll(require.context(
+  // FIXME https://github.com/webpack/webpack/issues/9300
+  './img',
+  true,                                   // useSubdirectories
+  /\.(png|jpe?g|svg)$/,                   // regExp
+  'sync'                                  // mode sync | async
+));
+console.log(images);
+
+/**
+ * ANCHOR MAIN
+ */
 const DUMMY_DATA = [
   { id: 1, value: 12, region: 'USA' },
   { id: 2, value: 10, region: 'Germany' },
@@ -59,3 +90,4 @@ const DUMMY_DATA = [
 d3Numbers()
 d32(DUMMY_DATA)
 d3Bar(DUMMY_DATA)
+d3Gallery(images)

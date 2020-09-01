@@ -32,7 +32,21 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
+
+      /** ANCHOR compress images */
+      {
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        use: [{
+          loader: 'img-optimize-loader',
+          options: {
+            compress: {
+              webp: true,
+              // disableOnDevelopment: true,
+            }
+          }
+        }],
+      },
     ]
   },
   plugins: [
