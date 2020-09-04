@@ -12,7 +12,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "new": "./scripts/newfile.sh",
-    "serve": "yarn build && http-server docs/.vuepress/dist/"
+    "serve": "yarn build && http-server ../docs/"
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,6 +27,9 @@
     "@vuepress/plugin-pwa": "^1.5.3",
     "@vuepress/plugin-register-components": "^1.5.3",
     "dotenv": "^8.2.0",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
+    "img-optimize-loader": "^1.0.7",
     "lodash.union": "^4.6.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-container": "^3.0.0",

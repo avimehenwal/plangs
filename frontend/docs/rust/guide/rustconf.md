@@ -9,6 +9,8 @@ tags:
 
 <TagLinks />
 
+![some image](../../.vuepress/public/img/js/javascript-design-issues.png)
+
 * async/await MVP version of feature
   * asynchronous Programming is different from parallel computing and concurrent programming.
 
@@ -30,6 +32,7 @@ Asynchronous Programming?
 
 * Co-operative vs Preeempitive Multitasking
 * Native vs greeen threading
+
 
 ## Resources
 

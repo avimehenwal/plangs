@@ -1,5 +1,8 @@
 require('dotenv').config()
 const { description, name, authors} = require('../../package.json')
+const imagemin = require( "imagemin" )
+const webp = require( "imagemin-webp" )
+
 const weburl = 'https://avi-vue-components.netlify.app/'
 
 const extendsNetworks = {
@@ -30,11 +33,24 @@ module.exports = {
    */
   chainWebpack: config => {
     config.module
-    .rule('pug')
-    .test(/\.pug$/)
-    .use('pug-plain-loader')
-    .loader('pug-plain-loader')
-    .end()
+      .rule('pug')
+        .test(/\.pug$/)
+        .use('pug-plain-loader')
+          .loader('pug-plain-loader')
+        .end()
+    config.module
+      .rule('images')
+        .test(/\.(png|jpe?g|webp|git|svg|)$/i)
+        .use('img-optimize-loader')
+          .loader('img-optimize-loader')
+          .options({
+            compress: {
+              // This will transform your png/jpg into webp.
+              webp: true,
+              disableOnDevelopment: true
+            }
+          })
+        .end()
   },
   /** NOTE enable webpack source-maps for vscode debugging
    * https://vuepress.vuejs.org/config/#configurewebpack

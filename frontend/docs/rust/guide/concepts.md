@@ -9,6 +9,8 @@ tags:
 
 <TagLinks />
 
+![wasm vs javascript](/img/rust/wasm-vs-js.png)
+
 * Memory Management
   * no Garbage collection
   * developers manage memeory in code

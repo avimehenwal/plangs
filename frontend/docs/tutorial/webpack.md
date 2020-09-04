@@ -22,6 +22,11 @@ tags:
 ## Use cases
 
 1. Make a dynamic image gallery using `flex` and `grid`
+2. Deal with images assets, compress and resize them. and other optimizations
+
+## How to deal with Images?
+
+* https://stackoverflow.com/questions/58827843/webpack-how-to-convert-jpg-png-to-webp-via-image-webpack-loader
 
 
 <Footer />
