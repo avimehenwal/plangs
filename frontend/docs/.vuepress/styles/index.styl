@@ -142,21 +142,3 @@ div.language-ts::before
     text-align: justify;
     /* font-size: large; */
     // font-style: monospace;
-
-/** CSS rip page style effect at the bottom */
-article {
-  background: pink;
-  width: 40%;
-  padding: 20px;
-  position: relative;
-}
-article::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 20px;
-  width: 100%;
-  background: url(/svg/rip.svg) bottom center;
-  background-size: 150%;
-}

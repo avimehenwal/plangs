@@ -74,6 +74,7 @@ module.exports = {
       { text: 'Browser', link: '/browser/' },
       { text: 'Config', link: '/config/' },
       { text: 'Javascript', link: '/javascript/', },
+      { text: 'Rust', link: '/rust/', },
       { text: 'Libraries', link: '/libraries/', },
       { text: 'Tutorials', link: '/tutorial/', },
       { text: 'Blog', link: '/posts/', },

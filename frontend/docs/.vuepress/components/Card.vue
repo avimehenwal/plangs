@@ -1,5 +1,5 @@
 <template>
-  <article :style="{ width: widthP}">
+  <article :style="{ width: widthP}" id="card">
       <slot>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ut! Debitis magnam, eligendi tempore iure temporibus quas possimus repudiandae reprehenderit laboriosam eius asperiores dicta nobis! Facilis, eveniet! Error, enim eos.
       </slot>
@@ -28,9 +28,9 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus" scoped>
 /* * CSS rip page style effect at the bottom */
-article
+article #card
   background: linear-gradient(lighten(#9198e5, 60%), pink);
   padding: 20px;
   position: relative;
@@ -39,7 +39,7 @@ article
   &:hover
     box-shadow: -10px 30px 20px grey;
 
-article::after
+article #card::after
   content: '';
   position: absolute;
   top: 100%;
