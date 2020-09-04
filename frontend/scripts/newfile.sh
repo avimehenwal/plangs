@@ -18,12 +18,36 @@ USAGE=$(cat << END
 END
 )
 
+ARCHETYPE=$(cat << END
+---\n
+title: $1\n
+date: $(date +"%Y-%m-%d")\n
+tags:\n
+- anime\n
+featuredimg: https://picsum.photos/800/500.webp\n
+author: avimehenwal\n
+summary: $1\n
+---\n
+\n
+# $1\n
+\n
+\n
+<Footer />\n
+END
+)
+
 if [ $# -eq 1 ]
   then
-    DESTINATION="$(pwd)/docs/blogposts/"
+    DESTINATION="$(pwd)/docs/posts/"
     FILE="$DESTINATION$(date +"%Y-%m-%d-")$1.md"
     touch $FILE
-    echo "NEW-POST-CREATED: $FILE"
+    if [ $? -eq 0 ]
+    then
+      echo "NEW-POST-CREATED: $FILE"
+      echo -e $ARCHETYPE >> $FILE
+    else
+      echo "ERROR: $?"
+    fi
   else
     echo $USAGE
     exit 1

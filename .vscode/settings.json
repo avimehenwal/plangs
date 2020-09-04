@@ -30,6 +30,7 @@
         "jsconsole",
         "plugin",
         "webpack",
-        "ghpages"
+        "ghpages",
+        "script"
     ]
 }

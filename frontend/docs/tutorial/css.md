@@ -82,6 +82,7 @@ CSS Framework | Gzipped Size (**KB**) | Remark
 * For blog post .level .level-left .level-item .field .control
 * Forms .label .input .select .textarea **Attched** .field .has-addons .control > .button
 * Grid system: .column
+* [Bulma cheatsheet](http://bulmacheatsheet.com/assets/bulma-cheat-sheet-7-2-2018.pdf)
 
 
 
