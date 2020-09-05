@@ -11,9 +11,9 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "dev:build": "vuepress build docs",
-    "build": "cross-env VUEPRESS_BASE=/plangs/ vuepress build docs",
+    "build": "cross-env VUEPRESS_BASE=/plangs/ yarn dev:build",
     "new": "./scripts/newfile.sh",
-    "serve": "yarn dev:build && http-server ../docs/"
+    "serve": "yarn dev:build && http-server ../docs/ -o"
   },
   "license": "MIT",
   "devDependencies": {
