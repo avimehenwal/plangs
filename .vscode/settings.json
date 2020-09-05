@@ -1,13 +1,8 @@
 {
     "conventionalCommits.scopes": [
-        "genesis",
         "scaffold",
-        "core",
-        "cli",
         "website",
-        "api",
-        "parser",
-        "package-manager",
+        "npm",
         "changelog",
         "readme",
         "component",
@@ -17,12 +12,8 @@
         "localization",
         "release",
         "vscode",
-        "npm",
         "vuepress",
         "netlify",
-        "ES6",
-        "javascript",
-        "graphics",
         "typescript",
         "guide",
         "jest",
@@ -33,6 +24,7 @@
         "ghpages",
         "script",
         "rust",
-        "navigation"
+        "navigation",
+        "search"
     ]
 }
