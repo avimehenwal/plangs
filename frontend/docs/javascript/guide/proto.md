@@ -13,7 +13,7 @@ tags:
 `__proto__` is the actual object that is used in the lookup chain to resolve methods, etc.
 `prototype` is the object that is used to build `__proto__` when you create an object with new.
 
-![javascript __proto__](../.vuepress/public/img/tests/js__proto__.png)
+![javascript __proto__](../../assets/tests/js__proto__.png)
 
 ## References
 

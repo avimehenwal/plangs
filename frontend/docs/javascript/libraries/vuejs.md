@@ -61,7 +61,7 @@ function userSorting () {
 
 Code is like comedy, the more you have to explain it, less funny it is.
 
-![milestones in web technologies](../.vuepress/public/img/browser/web-technologies-milestones.png)
+![milestones in web technologies](../../assets/browser/web-technologies-milestones.png)
 
 ### Questions
 

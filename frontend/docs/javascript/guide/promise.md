@@ -16,9 +16,11 @@ tags:
 
 <Dot code="digraph { node [fontsize=24, colorscheme=set312, style=filled] node [fontname=Helvetica] Promise [fillcolor=2 shape=component width=5] Pending [fillcolor=9 shape=note] Resolve [fillcolor=7] Reject [fillcolor=4] edge [penwidth=2 style=dashed, color=grey] Promise -> Pending [label=asynchronousActivity] Pending -> Promise edge [style=solid color=black] Promise -> Resolve Promise -> Reject }" />
 
+![javascript promises](../../assets/js/javascript-promises.png)
+
 ## :clipboard: Unit Test Report
 
-![jest unittest report with code coverage](../.vuepress/public/img/tests/jest-report.png)
+![jest unittest report with code coverage](../../assets/tests/jest-report.png)
 
 ## :pencil: How to write a `Promise` ?
 

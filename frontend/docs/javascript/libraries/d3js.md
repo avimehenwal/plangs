@@ -22,7 +22,7 @@ $$D3 = Data \, Driven \, Documents$$
 * `append()` add all those missing elements
 * general library for  manupulating docuemnts, text, numers, charts, shapes
 
-![append html elements inside DOM](../.vuepress/public/img/browser/d3-append.png)
+![append html elements inside DOM](../../assets/browser/d3-append.png)
 
 ## Questions
 

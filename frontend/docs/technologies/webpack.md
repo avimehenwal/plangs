@@ -17,7 +17,7 @@ tags:
 * https://github.com/GaoYYYang/image-optimize-loader#3-transform-your-pngjpg-into-webp
 * Then use `d3` to inject images data to gallery section
 
-![webpack compress images at runtime](../.vuepress/public/img/browser/webpack-png-2-webp.png)
+![webpack compress images at runtime](../assets/browser/webpack-png-2-webp.png)
 
 ## Use cases
 

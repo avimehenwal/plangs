@@ -9,7 +9,6 @@ tags:
 
 <TagLinks />
 
-![wasm vs javascript](../../.vuepress/public/img/rust/wasm-vs-js.png)
 
 * System programming languages
   * C, C++, golang

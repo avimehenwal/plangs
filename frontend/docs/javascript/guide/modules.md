@@ -21,8 +21,16 @@ tags:
 ```ts
 export = className;
 
-// compiles to
+// compiles to CommonJS module export syntax
 module.exports = className;
+```
+
+```js
+// ES6 modules export
+export default varName;
+
+// commonJS module export
+module.exports = varName;
 ```
 
 [Difference b/w module.exports.foo and exports.foo ?](https://blog.tableflip.io/the-difference-between-module-exports-and-exports/)

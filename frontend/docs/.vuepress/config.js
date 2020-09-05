@@ -30,6 +30,9 @@ module.exports = {
   /** NOTE
    * pug template loader
    * scss, sass, stylus, less has been built in VuePress
+   *
+   * Delete old rules first to overwrite new webpack rules
+   * https://github.com/vuejs/vuepress/issues/478#issuecomment-391022415
    */
   chainWebpack: config => {
     config.module
@@ -38,19 +41,23 @@ module.exports = {
         .use('pug-plain-loader')
           .loader('pug-plain-loader')
         .end()
-    config.module
-      .rule('images')
-        .test(/\.(png|jpe?g|webp|git|svg|)$/i)
-        .use('img-optimize-loader')
-          .loader('img-optimize-loader')
-          .options({
-            compress: {
-              // This will transform your png/jpg into webp.
-              webp: true,
-              disableOnDevelopment: true
-            }
-          })
-        .end()
+    /**
+     * FIXME
+     * <img alt="runtime" data-src="data:image/png;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWdzL3J1bnRpbWUuMDdkM2I1NDgud2VicCI7" loading="lazy" class="lazy medium-zoom-image" src="data:image/png;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWdzL3J1bnRpbWUuMDdkM2I1NDgud2VicCI7">
+     */
+    // config.module
+    //   .rule('compressimages')
+    //     .test(/\.(png|jpe?g|webp|git|svg|)$/i)
+    //     .use('img-optimize-loader')
+    //       .loader('img-optimize-loader')
+    //       .options({
+    //         compress: {
+    //           // This will transform your png/jpg into webp.
+    //           webp: true,
+    //           disableOnDevelopment: true
+    //         }
+    //       })
+    //     .end()
   },
   /** NOTE enable webpack source-maps for vscode debugging
    * https://vuepress.vuejs.org/config/#configurewebpack

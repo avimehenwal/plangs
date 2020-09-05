@@ -45,7 +45,7 @@ Tests are lifeline for your code. A dirty code could always be refactored, but a
 * what to assert on? values?
   * `expect(value).toMatchSnapshot()`
 
-![jest mocking function mock property](../.vuepress/public/img/tests/mocking_fn_properties.png)
+![jest mocking function mock property](../../assets/tests/mocking_fn_properties.png)
 
 ```ts
 let car = 'some cat'

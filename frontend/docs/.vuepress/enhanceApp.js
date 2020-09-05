@@ -1,6 +1,8 @@
 import Vuetify from 'vuetify'
 import VueGoogleCharts from 'vue-google-charts'
 
+import 'bulma/css/bulma.css'
+
 export default ({
   Vue,      // the version of Vue being used in the VuePress app
   options,  // the options for the root Vue instance
