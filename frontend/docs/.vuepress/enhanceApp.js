@@ -1,7 +1,11 @@
 import Vuetify from 'vuetify'
 import VueGoogleCharts from 'vue-google-charts'
 
-import 'bulma/css/bulma.css'
+/**
+ * FIXME
+ * interferes with ListPages component css
+ */
+// import 'bulma/css/bulma.css'
 
 export default ({
   Vue,      // the version of Vue being used in the VuePress app

@@ -66,7 +66,7 @@ module.exports = {
     devtool: 'source-map'
   },
   dest: '../docs',
-  base: '/javascript/',
+  base: '/plangs/',
   title: name,
   description: description,
   head: [
@@ -84,7 +84,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help me improve this page!',
     lastUpdated: true,
-    logo: '/svg/js.svg',
+    logo: '/svg/dev.svg',
     // displayAllHeaders: true,               // Default: false
     activeHeaderLinks: true,
     sidebar: 'auto',

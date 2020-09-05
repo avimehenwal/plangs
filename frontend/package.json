@@ -1,7 +1,7 @@
 {
-  "name": "@avi/javascript",
+  "name": "@avi/plangs",
   "version": "0.0.1",
-  "description": "javascript learning notes",
+  "description": "Programming language learning notes by yours truly",
   "main": "index.js",
   "authors": {
     "name": "Avi Mehenwal",
