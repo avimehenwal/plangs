@@ -89,7 +89,7 @@ module.exports = {
     activeHeaderLinks: true,
     sidebar: 'auto',
     sidebarDepth: 2,
-    searchPlaceholder: 'Search...',
+    // searchPlaceholder: 'Search...',
     smoothScroll: true,
     nav: [
       { text: 'Tags', link: '/tags.html', },
