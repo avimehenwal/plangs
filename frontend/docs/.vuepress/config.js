@@ -66,7 +66,7 @@ module.exports = {
     devtool: 'source-map'
   },
   dest: '../docs',
-  base: '/plangs/',
+  base: process.env.VUEPRESS_BASE || '/',
   title: name,
   description: description,
   head: [
@@ -89,7 +89,6 @@ module.exports = {
     activeHeaderLinks: true,
     sidebar: 'auto',
     sidebarDepth: 2,
-    // searchPlaceholder: 'Search...',
     smoothScroll: true,
     nav: [
       { text: 'Tags', link: '/tags.html', },
