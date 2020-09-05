@@ -3,7 +3,7 @@ const { description, name, authors} = require('../../package.json')
 const imagemin = require( "imagemin" )
 const webp = require( "imagemin-webp" )
 
-const weburl = 'https://avi-vue-components.netlify.app/'
+const weburl = 'https://avimehenwal.github.io/plangs/'
 
 const extendsNetworks = {
   email: {
@@ -62,9 +62,9 @@ module.exports = {
   /** NOTE enable webpack source-maps for vscode debugging
    * https://vuepress.vuejs.org/config/#configurewebpack
    */
-  configureWebpack: {
-    devtool: 'source-map'
-  },
+  // configureWebpack: {
+  //   devtool: 'source-map'
+  // },
   dest: '../docs',
   base: process.env.VUEPRESS_BASE || '/',
   title: name,
@@ -79,7 +79,7 @@ module.exports = {
     author: authors.name,
     // repo: pkg.repository.url,
     // href="https://github.com/[object Object]" https://github.com/git+https://github.com:avimehenwal/vue-components.git
-    repo: 'avimehenwal/javascript',
+    repo: 'avimehenwal/plangs',
     repoLabel: 'GitHub',
     editLinks: true,
     editLinkText: 'Help me improve this page!',
