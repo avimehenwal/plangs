@@ -31,6 +31,15 @@ react-scripts | |
 
 ## React Hooks
 
+### useState Hook
+
+* can use hooks ONLY inside of function components and NOT class component
+* Hooks cannot be nested into anything, loops, functions, conditionals etc
+* use the function varient, runs only once when component is loaded
+* returns 2 values
+  * current state values
+  * function to update the current state - use the function version to set your state value
+    * use previous value to update the current values
 
 ### useRef Hook use case
 
@@ -42,7 +51,6 @@ react-scripts | |
 Do not manage states yourself, let react do it for you. Do not misuse userRef
 Update states using JSX
 :::
-
 
 ref vs state? Difference?
 :   Refs doent cause component to reupdate.

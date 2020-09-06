@@ -1,12 +1,14 @@
 import React, {useRef} from 'react'
 import { Button, Container, Form } from "react-bootstrap";
 
-export default function Login() {
+export default function Login({onIdSubmit}) {
   const idRef = useRef()
 
   function handleSubmit(e) {
     // prevent page from refreshing
     e.preventDefault()
+
+    onIdSubmit(idRef.current.value)
   }
 
   return (
