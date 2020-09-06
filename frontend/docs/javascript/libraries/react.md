@@ -10,6 +10,9 @@ tags:
 
 <TagLinks />
 
+* Generate and return content from javascript
+
+
 Why we need a frontend web framework in the first place? What problem does it solve?
 :   To work with javascript little bit easier and organised. Good for managing enterprise level projects
 
