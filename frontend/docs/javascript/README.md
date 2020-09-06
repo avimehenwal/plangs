@@ -20,4 +20,14 @@ features:
 footer: Made with ❤️ by Avi Mehenwal
 ---
 
+DOM is the most important Object in a browser.
+
+Browser APIs enables you to select elements, add/respons/emit events
+
+*[DOM]: DOcument Object Model is a datastructure created by browser
+*[Object]: javascript objects are analogous to dictionary lookups
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c-I5S_zTwAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <ListPages />

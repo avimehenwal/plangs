@@ -79,5 +79,9 @@ Code is like comedy, the more you have to explain it, less funny it is.
 * [devtools not working with vue3](https://github.com/vuejs/vue-devtools/issues/1244)
 * [__VUE_DEVTOOLS_APP_RECORD__](https://github.com/vuejs/vue-devtools/issues/1246)
 
+## Resources
+
+* [Angular | react | vuejs google trend data](https://trends.google.com/trends/explore?q=angular,react,vue)
+
 
 <Footer />
