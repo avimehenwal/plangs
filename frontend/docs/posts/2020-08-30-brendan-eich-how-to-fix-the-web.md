@@ -3,6 +3,7 @@ title: How to fix the web
 tags:
 - brendan
 - eich
+- post
 ---
 
 # How to fix the web

@@ -59,7 +59,18 @@ But what are the differences between using Babel and the TypeScript compiler? [A
 
     1. TypeScript by default compiles an entire project at once, while Babel only compiles one file at a time.
 
+## Interfaces
 
+Difference between implements and extends a class ?
+:   A class could extend to an interface as well as implement an interface.
+
+    keyword     | description
+    ------------|------------------
+    implements  | same shape, but NOT a child, commonly used with Interfaces
+    extends     | new class as a child, with all parents properties
+
+    Implements a new class means,
+`
 
 ## :closed_book References
 

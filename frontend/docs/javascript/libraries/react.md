@@ -11,6 +11,11 @@ tags:
 <TagLinks />
 
 * Generate and return content from javascript
+* How to reusestateful logic between components?
+  * Use react lifecycle hooks
+    * componentDidMount
+    * componentDidUpdate
+    * componentWillUnmount - cleanup code
 
 
 Why we need a frontend web framework in the first place? What problem does it solve?
@@ -55,6 +60,11 @@ Update states using JSX
 ref vs state? Difference?
 :   Refs doent cause component to reupdate.
 
+Library | Description
+--------|-------------
+react-dom | DOM manupulation helper functions, render() function
+[smoothscroll-polyfill](https://github.com/iamdustan/smoothscroll) | scroll behaviour css proprty
+
 
 ## Features
 
@@ -65,8 +75,36 @@ ref vs state? Difference?
 * [ ] Components
 * [ ] States
 
+## REDUX
+
+* could be used independently of react, independent js library
+* state management
+* `useState`, `useSlice`
+* MobX is alternative library
+* Apollo, build, query and manage data graphs
+
+```jsx
+function Counter() {
+  const [counter, setCounter] = useState(0)
+
+  const increment = () => {
+    setCounter(prevCounter => prevCounter + 1)
+  }
+
+  return (
+    <div>
+      Value: {counter} <button onClick={increment}>Increment</button>
+    </div>
+  )
+}
+```
+
 ## Look for Help
 
 * https://stackoverflow.com/questions/tagged/reactjs
+* https://blog.webdevsimplified.com/
+* https://reactpatterns.com/
+* https://reactcheatsheet.com/
+
 
 <Footer />
