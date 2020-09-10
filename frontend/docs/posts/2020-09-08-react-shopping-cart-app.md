@@ -6,10 +6,10 @@ tags:
 - post
 featuredimg: https://picsum.photos/800/500.webp
 author: avimehenwal
-summary: react-shopping-cart-app
+summary: react shopping cart app
 ---
 
-# react-shopping-cart-app
+# react shopping cart app
 
 ```bash
 npx create-react-app@1.5.2 shopping-cart-app
@@ -59,7 +59,7 @@ Why? Because js engine converts strings (non boolean types) to truthy
 
 * [ ] how to use component data and props
 * [ ] How to set attributes/styles in JSX? like `<img src=?>`
-  * inline styles using `{{...}}`
+  * inline styles using double braces `{{` `...` `}}`
   * styles from component props/data
 * [ ] How to handle events?
   * unlike the normal js its not the function call, we pass the reference to function in JSX
@@ -73,5 +73,5 @@ Why? Because js engine converts strings (non boolean types) to truthy
   * variable to a constructor
 
 
- <Footer />
+<Footer />
 
