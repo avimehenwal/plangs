@@ -12,7 +12,25 @@ summary: oop-principles-in-js
 
 The Art of Writing [reusable, refactorable and redable code](https://github.com/ryanmcdermott/3rs-of-software-architecture) **3R's**
 
+We spend much more time reading code than writing code!, when code is NOT written for extension.
+
+There are 100 million programmers in the world.
+
+* Bulk of programming is managing dependencies
+* Compilers knows about the source code.
+* Why is OO (object oriented) design part of every language today?
+  * what so good about OO that all languages are OO these days?
+  * what about COBOL, FORTRAN style programming
+  * OO languages do not need pointers to functions, because they are polymorphic
+* No polymorphism in C
+* Carefully decide which direction the arrows between modules point?
+  * thats what OO is
+  * Managing dependencies by selectively re-inverting keys in your s/w
+
+
 ## SOLID
+
+Introduced by [Robert Martin aka uncle bob](https://en.wikipedia.org/wiki/Robert_C._Martin)
 
 ### Single Responsibility Principle
 
@@ -156,6 +174,8 @@ total = total + (options.ship || 5)
 
 * https://github.com/ryanmcdermott/clean-code-javascript
 * https://www.youtube.com/playlist?list=PLZlA0Gpn_vH9kocFX7R7BAe_CvvOCO_p9
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zHiWqnTWsn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-ptMtJAdj40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
