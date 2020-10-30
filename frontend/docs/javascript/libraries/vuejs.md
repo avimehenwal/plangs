@@ -82,6 +82,8 @@ Code is like comedy, the more you have to explain it, less funny it is.
 ## Resources
 
 * [Angular | react | vuejs google trend data](https://trends.google.com/trends/explore?q=angular,react,vue)
+* https://github.com/krausest/js-framework-benchmark
+* In which condition do you become available eto life process?
 
 
 <Footer />

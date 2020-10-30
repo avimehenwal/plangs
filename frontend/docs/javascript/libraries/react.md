@@ -143,6 +143,30 @@ function Counter() {
 * jest
   * little bit more helpful output against an expectation
 
+How can we test react app?
+
+```mermaid
+graph LR
+A(Rendering Component Tree):::blue
+B(Rendering complete App):::yellow
+A --> B
+classDef green fill:#1f9,stroke-width:0px;
+classDef yellow fill:#FFE873,stroke-width:0px;
+classDef blue fill:#b8d4ff,stroke-width:0px;
+classDef purple fill:#f9f,stroke:#333,stroke-width:0px;
+```
+
+* jest lets you access DOM via jsdom
+  * mocking and timers
+
+* How to test class components?
+* `react.act()`
+* Component works properly for a prop
+* How to Mock modules?
+* Simulate dom events
+  * `button.dispatchEvent(new MouseEvent("click", { bubbles: true }));`
+* Mocking Timers
+* Snapshot Testing
 
 ## Look for Help
 
