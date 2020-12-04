@@ -1,7 +1,7 @@
 require('dotenv').config()
-const { description, name, authors} = require('../../package.json')
-const imagemin = require( "imagemin" )
-const webp = require( "imagemin-webp" )
+const { description, name, authors } = require('../../package.json')
+const imagemin = require("imagemin")
+const webp = require("imagemin-webp")
 
 const weburl = 'https://avimehenwal.github.io/plangs/'
 
@@ -37,10 +37,10 @@ module.exports = {
   chainWebpack: config => {
     config.module
       .rule('pug')
-        .test(/\.pug$/)
-        .use('pug-plain-loader')
-          .loader('pug-plain-loader')
-        .end()
+      .test(/\.pug$/)
+      .use('pug-plain-loader')
+      .loader('pug-plain-loader')
+      .end()
     /**
      * FIXME
      * <img alt="runtime" data-src="data:image/png;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWdzL3J1bnRpbWUuMDdkM2I1NDgud2VicCI7" loading="lazy" class="lazy medium-zoom-image" src="data:image/png;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJpbWdzL3J1bnRpbWUuMDdkM2I1NDgud2VicCI7">
@@ -94,11 +94,10 @@ module.exports = {
       { text: 'Tags', link: '/tags.html', },
       { text: 'APIs', link: '/apis/' },
       { text: 'Browser', link: '/browser/' },
-      { text: 'Config', link: '/config/' },
       { text: 'Javascript', link: '/javascript/', },
       { text: 'Rust', link: '/rust/', },
-      { text: 'Libraries', link: '/libraries/', },
-      { text: 'Tutorials', link: '/tutorial/', },
+      { text: 'Technology', link: '/technologies/', },
+      { text: 'Test', link: '/test/', },
       { text: 'Blog', link: '/posts/', },
     ],
   },
@@ -141,11 +140,11 @@ module.exports = {
       //     dirname: 'blogposts',
       //     path: '/blog',
       //     itemPermalink: '/blog/:year/:month/:day/:slug',
-          // layout: 'MyIndexPost',
-          // itemLayout: 'MyPost',
-          // pagination: { lengthPerPage: 2 },
-        // },
-        // { id: 'guide', dirname: 'guide', path: '/guide', },
+      // layout: 'MyIndexPost',
+      // itemLayout: 'MyPost',
+      // pagination: { lengthPerPage: 2 },
+      // },
+      // { id: 'guide', dirname: 'guide', path: '/guide', },
       // ],
       /**
        * ANCHOR frontmatter
@@ -165,27 +164,27 @@ module.exports = {
       //   },
       // ],
     }],
-    [ '@vuepress/google-analytics', { 'ga': 'UA-113741959-10' } ],
+    ['@vuepress/google-analytics', { 'ga': 'UA-113741959-10' }],
     ['vuepress-plugin-reading-time', {
       excludes: ['/about', '/tag/.*']
     }],
     // https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
-    [ 'vuepress-plugin-mermaidjs', {
+    ['vuepress-plugin-mermaidjs', {
       // "theme": 'forest',
       // "theme": 'dark',
       "theme": "default",
       // "font-size": "20",
       gantt: {
-        titleTopMargin:20,
-        barHeight:30,
-        barGap:10,
-        topPadding:50,
-        leftPadding:0,
-        gridLineStartPadding:10,
-        fontSize:25,
-        fontFamily:'"Open-Sans", "sans-serif"',
-        numberSectionStyles:4,
-        axisFormat:'%Y-%m-%d',
+        titleTopMargin: 20,
+        barHeight: 30,
+        barGap: 10,
+        topPadding: 50,
+        leftPadding: 0,
+        gridLineStartPadding: 10,
+        fontSize: 25,
+        fontFamily: '"Open-Sans", "sans-serif"',
+        numberSectionStyles: 4,
+        axisFormat: '%Y-%m-%d',
       }
     }],
     [
