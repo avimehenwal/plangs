@@ -3,7 +3,7 @@ home: true
 heroImage: /svg/js.svg
 tagline: javascript notes
 actionText: Start 👉
-actionLink: /guide/
+actionLink: /javascript/guide/
 features:
   - title: ⏱ Asynchronous Programming
     details: Asynchronous execution using callbacks, Promises and async/await function calls

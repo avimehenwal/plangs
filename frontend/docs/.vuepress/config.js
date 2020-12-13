@@ -94,7 +94,14 @@ module.exports = {
       { text: 'Tags', link: '/tags.html', },
       { text: 'APIs', link: '/apis/' },
       { text: 'Browser', link: '/browser/' },
-      { text: 'Javascript', link: '/javascript/', },
+      {
+        text: 'Javascript',
+        items: [
+          { text: 'JS Home', link: '/javascript/' },
+          { text: 'Guide', link: '/javascript/guide/' },
+          { text: 'Libraries', link: '/javascript/libraries/' }
+        ]
+      },
       { text: 'Rust', link: '/rust/', },
       { text: 'Technology', link: '/technologies/', },
       { text: 'Test', link: '/test/', },
