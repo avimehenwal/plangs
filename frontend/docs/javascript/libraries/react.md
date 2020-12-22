@@ -28,11 +28,6 @@ Bootstrap new react app
 npx create-react-app my-app
 ```
 
-| packages      | Description |
-| ------------- | ----------- |
-| react-dom     |             |
-| react-scripts |             |
-
 ## React Hooks
 
 ### useState Hook
@@ -123,7 +118,9 @@ function Counter() {
 
 > For long-term maintainability, if there is a problem, we should be able to fix it.
 
-- Avoid prop drilling
+- Avoid **prop drilling**
+  - How to pass same props to multiple components?
+  - Use Objects, Functions as props. Whats the difference?
 - Properly use sideEffect within components
 - Mixed Components - side efffects + state handling + views
 - Container / View Pattern - look for props changes for sideeffects and conditional rendering
@@ -347,6 +344,9 @@ Google Trends
 
 React is more polular than **renewable energy**, **orange juice** on google searches
 
+- Abstract away the modern browsers capability APIs by creating your own Declerative React Components
+- https://github.com/downshift-js/downshift
+
 ### NEW in ReactJS
 
 1. Reusing Controller Logic in components
@@ -360,17 +360,22 @@ React is more polular than **renewable energy**, **orange juice** on google sear
   - hot reloading doesnt supports functions components
   - fast-refresh is a first class features
   - make decision, update or re-mount the component
+- [Conditional Rendering 6 ways](https://www.digitalocean.com/community/tutorials/7-ways-to-implement-conditional-rendering-in-react-applications)
 
 ### HOOKS
 
 | React Hooks  | Description                                                                                           |
 | ------------ | ----------------------------------------------------------------------------------------------------- |
-| `useState`   | set/get local states                                                                                  |
+| `useState`   | set/get local states, `counter`                                                                                  |
 | `useEffect`  | SideEffects = data fetching, subscriptions, or manually changing the DOM from React components before |
 | `useContext` | subscribe to React context without introducing nesting                                                |
 | `useReducer` | manage local state of complex components with a reducer                                               |
 
-How to build your own hooks?
+- Ditching redux with reducer causes lot of  unnecessary renders which can be fixed by using useMemo hooks. Please make a video on this.
+- How to build your own hooks? Use Cases?
+- Difference b/w redux and context API?
+  - context API only gives you access in JSX, render () part
+  - cannot use it in other places like, componentDidMount
 
 ### React Design Patterns
 
@@ -494,6 +499,59 @@ Real-Time webapp to conduct instant Polls
 | more          | Popularity, Talent                  | less       |
 |               | Startup time, runtime performance   |            |
 
+## State management
+
+Terminologies explaination
+
+| Terminology | explaination                                                   |
+| ----------- | -------------------------------------------------------------- |
+| State       | WebApp State, eg onboarding steps, saved shopping carts, forms |
+
+- Hooks and Context API can replace some use cases of Red+ux
+- `useState` are local states, we use context API to **lift up** local states to global states
+- Replay DOM Mutations
+- Context API for low frequency updates like, themes, authenticated user, preferred language
+
+### History Of ReactJS
+
+> How are things initially rendered?
+> How are they updated?
+
+| Timeline | Event                                                         |
+| -------- | ------------------------------------------------------------- |
+| 2013     | Facebook launchedd react, `setState` was a thing              |
+| 2014     | Flux was release, due to issues with MVC development model    |
+| 2015     | **RED**ucer Functions + fl**UX** = Redux                      |
+| 2017     | React Fibre, complete rewite of core reconciliation algorithm |
+| 2018     | React Context API, `useContext()`                             |
+| 2019     | React Hooks                                                   |
+
+How to measure Popularity of Project?
+
+1. Google Trends search results based on geolocation
+2. npm Downloads
+3. GitHub Stars
+
+- React traps DOM events then generate Synthetic events on them,
+  - Shines for IE browser compatibility
+
+## Frontend Development Frameworks
+
+> How should we structure JS applications?
+
+| year | Analogy                             |
+| ---- | ----------------------------------- |
+| 1996 | Bulbasaur , Charmandar and Squirtle |
+| 2020 | `Angular`, `Vue`, `React`           |
+
+- JS Module pattern
+
+| JS Execution                                                                   | Info                                                                                          |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Main Thread                                                                    | Usually UI                                                                                    |
+| [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) | background thread, `Worker()`<br> you can't directly manipulate the DOM from inside a worker, |
+| Message sharing                                                                | `postMessage()` and `onmessage` calls, both ways                                              |
+
 ## Q&A
 
 - [Difference b/w imperative and declerative programming?](https://stackoverflow.com/questions/33655534/difference-between-declarative-and-imperative-in-react-js)
@@ -514,14 +572,45 @@ Real-Time webapp to conduct instant Polls
 - Capturing vs Bubling EventListners?
 - Github to host images https://raw.githubusercontent.com/avimehenwal/plangs/master/docs/assets/img/devtools-snippets.eea2f4f7.png
   - `https://raw.githubusercontent.com/UserName/NameRepo/Branch/NameImg.png`
+- Overriding scoped CSS?
+  - [CSS Modules](https://github.com/css-modules/css-modules)
+    - Import and Use CSS in JS
+    - Composition
+- [VUE like slots in react](https://medium.com/@srph/react-imitating-vue-slots-eab8393f96fd)
+- [props.children](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
+- [Why is DOM slow?](https://www.reddit.com/r/javascript/comments/6115ay/why_do_developers_think_the_dom_is_slow/)
+- [What does debounce mean in JS and React?](https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086)
+  - update the layout when input has stopped.
+  - User is scrolling, update layout when user has stopped scrolling.
+- https://github.com/httpJunkie/react-todo
+- How to check is a user is online/offline?
+  - capability of modern browsers `navigator.onLine` property
+- [Differencce between props|states|local variables?](https://stackoverflow.com/questions/58252454/react-hooks-using-usestate-vs-just-variables)
 
 [blog]: https://reactjs.org/blog/2020/10/20/react-v17.html
 [docs]: https://reactjs.org/tutorial/tutorial.html
+
+## Resources
+
+- https://www.sitepoint.com/replace-redux-react-hooks-context-api/
+- [Tell me you are a react developer without using react?](https://twitter.com/mxstbr/status/1339170677694328839)
+  - I write CSS in JS
+  - I write HTML in javascript that is not actual HTML which converts to Javascript that creates DOM which is not actual DOM that renders actual DOM.
+  - I got them Hooked
+- https://gist.github.com/sebmarkbage/a5ef436427437a98408672108df01919
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x7cQ3mrcKaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > **25%** of food waste from U, Europe and USA would **end** the world hunger
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zVHWugBPGBE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Introduction to Flux - Lin Clark
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZCuYPiUIONs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### React.JS Introduction 2013
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XxVg_s8xAms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <Footer />

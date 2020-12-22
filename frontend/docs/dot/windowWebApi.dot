@@ -1,0 +1,22 @@
+digraph {
+  label="window web api"
+  bgcolor=none
+  rankdir="LR"
+
+  node [fontsize=24, colorscheme=set312, style=filled]
+  node [fontname=Helvetica]
+
+  window [fillcolor=2 shape=component width=3]
+  document [fillcolor=1]
+  screen [fillcolor=3]
+  history [fillcolor=4]
+  location [fillcolor=5]
+  console [fillcolor=6]
+
+  edge [style=solid color=black]
+  window -> document
+  window -> screen
+  window -> history
+  window -> location
+  window -> console
+}

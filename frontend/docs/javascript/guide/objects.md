@@ -1,10 +1,10 @@
 ---
 title: Objects
 tags:
-- object
-- javascript
-- hash
-- hashmaps
+  - object
+  - javascript
+  - hash
+  - hashmaps
 ---
 
 # :memo: Objects
@@ -18,8 +18,8 @@ This way you are sure you are seeing the value of obj at the moment you log it. 
 :::
 
 How to pretty print Objects in console for debugging?
-:   The [JSON.stringify() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-    converts a JavaScript object or value to a JSON string,
+: The [JSON.stringify() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+converts a JavaScript object or value to a JSON string,
 
     ```js
     JSON.stringify(value[, replacer[, space]])
@@ -27,5 +27,15 @@ How to pretty print Objects in console for debugging?
 
     [JSON.Parse reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
+### What is this in js?
+
+`this` ==> Current Execution Context `console.log(this)`
+
+- could be browser window or inside a function object
+- [MDN webdocs this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+## Types vs Interfaces
+
+Interfaces are geared towards defining the shape of Objects, classes, functions etc.
 
 <Footer />
