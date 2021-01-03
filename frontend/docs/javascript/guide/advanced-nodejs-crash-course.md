@@ -53,7 +53,14 @@ ab -n 1000 -c 100 "http://localhost:1337" | grep "Requests"
 - Final Example
 - Outro
 
-### Resources
+## Resources
+
+### Links
+
+- [various js engines with benchmarks](https://bellard.org/quickjs/bench.html)
+- [JS Event loop visualization](http://latentflip.com/loupe/)
+
+### Videos
 
 <iframe width="560" height="315" src=
 "https://www.youtube.com/embed/qG-PLm3APSs" frameborder="0" allow=
