@@ -59,6 +59,7 @@ ab -n 1000 -c 100 "http://localhost:1337" | grep "Requests"
 
 - [various js engines with benchmarks](https://bellard.org/quickjs/bench.html)
 - [JS Event loop visualization](http://latentflip.com/loupe/)
+- [33 advanced js concepts](https://github.com/leonardomso/33-js-concepts)
 
 ### Videos
 

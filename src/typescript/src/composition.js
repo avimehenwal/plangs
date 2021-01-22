@@ -6,19 +6,18 @@
 
 function swimmer({ name }) {
   return {
-    swim: () => console.log(`${name} swam`)
-  }
+    swim: () => console.log(`${name} swam`),
+  };
 }
 
 function SwimmingMonster(name) {
-  const monster = { name: name }
+  const monster = { name: name };
   return {
     ...monster,
-    ...swimmer(monster)
-  }
+    ...swimmer(monster),
+  };
 }
 
-
 // MAIN
-const obj = SwimmingMonster('Monster')
-obj.swim()
+const obj = SwimmingMonster("Monster");
+obj.swim();

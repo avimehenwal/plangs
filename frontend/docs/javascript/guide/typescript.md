@@ -76,6 +76,32 @@ Difference between implements and extends a class ?
 
 Difference between Interfaces and Types?
 
-## :closed_book References
+## Crashcourse
+
+A **data-type** defines a collection of data values and set of predefined operations on those values.
+
+## Advanced Typescript
+
+- [Iterators and Generators](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html)
+- Generic Types using `<T>`, `<U>`, `<V>`, `<W>`
+- Structural Typing
+- Conditional Types
+- `never` for functions which do not return anything
+
+```typescript
+// Guarentee on generic type <T> to always have a length property
+interface Lengthwise {
+  length: number;
+}
+
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+  console.log(arg.length);
+  return arg;
+}
+
+loggingIdentity([1, 2, 3]);
+```
+
+## :closed_book: References
 
 <Footer />
