@@ -103,6 +103,7 @@ module.exports = {
         ]
       },
       { text: 'Rust', link: '/rust/', },
+      { text: 'Clojure', link: '/clojure/', },
       { text: 'Technology', link: '/technologies/', },
       { text: 'Test', link: '/test/', },
       { text: 'Blog', link: '/posts/', },
