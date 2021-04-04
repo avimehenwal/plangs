@@ -28,6 +28,7 @@
         "navigation",
         "search",
         "post",
-        "typescript"
+        "typescript",
+        "clojure"
     ]
 }

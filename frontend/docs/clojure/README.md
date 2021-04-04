@@ -27,7 +27,7 @@ footer: Made with ❤️ by Avi Mehenwal
 - Lambda Claculus yields a small language core, Other language features are implemented as **MACROS**
 - Accepted in [HOPL](https://hopl4.sigplan.org/)
 - Implement erlang like message passing distributed systems using Actor Model
-- No Assignment Operator
+- No Assignment Operator, use `let` and `def`
 
 \*[HOPL]: History of porgramming languages
 

@@ -1,16 +1,16 @@
 ---
 title: Browser API
 tags:
-- browser
-- api
+  - browser
+  - api
 ---
 
 # Browser API
 
 <TagLinks />
 
-* [what are Web APIS?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-* [web API Reference](https://developer.mozilla.org/en-US/docs/Web/API)
+- [what are Web APIS?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [web API Reference](https://developer.mozilla.org/en-US/docs/Web/API)
 
 [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
@@ -22,5 +22,6 @@ tags:
 4. Audio and Video API
 5. Device API - Notification, vibration API
 6. Client side storage API
+7. How to do something reperatively (fixed time interval) in UI, countodwn timer etc. `setInterval` or CSS
 
 <Footer />

@@ -1,4 +1,3 @@
-# Rust
-
+# :books: Rust Contents
 
 <ListPages />

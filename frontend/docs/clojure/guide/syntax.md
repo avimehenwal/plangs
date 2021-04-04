@@ -29,4 +29,12 @@ The syntax for them is different, even if the meanings are related.
 
 `doc`, `find-doc`, `apropos`, `source`, and `dir`
 
+> What is underscore in reframe?
+
+The underscore is the universal ignore symbol. Its a valid symbol indentifier
+
+```lisp
+(let [_ 1] (println _))
+```
+
 <Footer />
