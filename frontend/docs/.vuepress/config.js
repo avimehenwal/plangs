@@ -102,8 +102,15 @@ module.exports = {
           { text: 'Libraries', link: '/javascript/libraries/' }
         ]
       },
+      {
+        text: 'Clojure',
+        items: [
+          { text: 'Clojure', link: '/clojure/' },
+          { text: 'Guide', link: '/clojure/guide/' },
+          { text: 'Libraries', link: '/clojure/libraries/' }
+        ]
+      },
       { text: 'Rust', link: '/rust/', },
-      { text: 'Clojure', link: '/clojure/', },
       { text: 'Technology', link: '/technologies/', },
       { text: 'Test', link: '/test/', },
       { text: 'Blog', link: '/posts/', },
