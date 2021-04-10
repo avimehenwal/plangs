@@ -53,6 +53,9 @@ what is the output of browser?
 - CSS Events
 - CSS Browser Compatibility
 - CSS Media Queries
+- CSS `Clamp()`, reduce responsive code, min, maxm clamp
+- CSS `calc(100vw - 80px)` use different units
+- CSS maintains internal states, heading counters `counter-increment: headings`
 
 ### SVG
 
@@ -108,6 +111,65 @@ The most important and fundamental reason why modern frameworks are used is that
 
 As with most frameworks, you usually shouldn't use it until you find that your other tools are failing you somehow.
 
+#### [Javascript DOM API Events](https://www.w3schools.com/tags/ref_eventattributes.asp)
+
+- [Whats the difference b/w onchange and oninput?](https://stackoverflow.com/questions/38256332/in-react-whats-the-difference-between-onchange-and-oninput)
+- Fireofx how to minotor/log events? Use js debugger
+- firefox devtools debugger is built using react and redux
+- [Where is firefox mozilla source ?](https://searchfox.org/mozilla-central/source)
+
+## Others
+
+Amazon famously found that every **100ms** of delay in the load time of amazon.com cost them 1% in sales.
+So loading an ==80KB JQuery is a big problem,== a problem we can avoid if we can find lighter alternatives.
+
+- Web accessibility and ARIA tags
+- Add internationalization and localization to the website? JS Objects
+- How to detect user locale?
+
+```js
+var en_us = {
+  welcome: "Welcome!",
+};
+
+var fr_ca = {
+  welcome: "Salut!",
+};
+
+var lang = en_us;
+document.getElementById("welcome").innerHTML = lang.welcome;
+```
+
+## Coding Challenges
+
+100DaysOfCode
+
+::: tip why CSS need to be checked for cross browser support?
+CSS has been acound since netscape navigator and various browsers have implemented it in various wasys. No common consensus until specification arrived later
+:::
+
+- https://www.florin-pop.com/blog/2019/09/100-days-100-projects/
+- https://awesomeopensource.com/project/nas5w/100-days-of-code-frontend#jest
+- Todo Applcaition
+- Expense tracker app
+- Shopping list
+- Movie/Book/Series list
+- Image gallery
+- [Web component template using vanilla js template](https://www.thinktecture.com/en/web-components/native-web-components-without-framework/)
+- Form Validation using rules composition
+- internationalization and localization support to webapp, without framework
+- [HTML templates](https://www.w3schools.com/tags/tag_template.asp)
+- Tracker js for analytics, account for total time spent on website, click, hover behaviour etc.
+- Responsive webdesign, font/element/media size, padding/margin/border based on resolution
+- cross browser suppport css tags
+- SEO tags
+- Booking/Reservation systems (ticketing/rail/ doctor appointment/movie/pre-order )
+- Recommendation/ you may also like widgets
+- search bars with predictive search + analytics
+- commenting systems
+- File upload, drag and drop areas
+- Loading bars/icons
+
 ## Common Operations
 
 How to remove a block of elements from DOM?
@@ -147,9 +209,7 @@ return visible ? <div>{props.children}</div> : <div />;
 </code-block>
 </code-group>
 
-## Others
 
-- Web accessibility and ARIA tags
 
 <Footer />
 ```
