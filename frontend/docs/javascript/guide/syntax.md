@@ -5,6 +5,7 @@ tags:
   - javascript
   - language
   - grammer
+  - closure
 ---
 
 # Syntax
@@ -40,5 +41,38 @@ Difference between javascript function and assigning function to a variable?
 
     * Variant #2 uses hoisting, whereas #1 would be initalized only once variable is reached and read by compiler.
     * variant #1 uses [anonymous function](https://en.wikipedia.org/wiki/Anonymous_function) assigned to a variable.
+
+## Tagged Template Literals Use cases
+
+- static content and dynamic content
+- just tagged templated string in jest to parameterized test cases. `test.each`
+- change data to human redable strings `2 hours ago`
+- calculate the works in template and calculate read time count.
+- Localization
+- GraphQL
+
+![tagged template literal](../../.vuepress/public/img/webdev/template-literals.png)
+
+![js const is flawed](../../.vuepress/public/img/webdev/js-const.png)
+
+## Javascript Closures
+
+```js
+var num = 4;
+function outer() {
+  var num = 2;
+  function inner() {
+    num++;
+    var num = 3;
+    console.log(num);
+  }
+  inner();
+}
+outer(); // 3
+```
+
+## Arrays
+
+- How to add and remove from **start** and **end** of array? `push`, `pop`, `unshift`, `shift`
 
 <Footer />

@@ -30,4 +30,29 @@ What is js `bind`? [How is it different from Symbols()?](../guide/symbol-bind.md
     classDef blue fill:#b8d4ff,stroke-width:0px;
     ```
 
+## Linked List
+
+```js
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.lenth = 0;
+  }
+  insertAtHead(data) {
+    const newNode = new LinkedListNode(data, this.head);
+    this.head = newNode;
+    this.length++;
+  }
+}
+
+class LinkedListNode {
+  constructor(value, next) {
+    this.value = value;
+    this.next = next;
+  }
+}
+// TESTS
+// createa list from bunch of values
+```
+
 <Footer />
