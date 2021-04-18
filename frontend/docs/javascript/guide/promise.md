@@ -1,22 +1,24 @@
 ---
 title: Promise
 tags:
-- promise
-- reject
-- resolve
+  - promise
+  - reject
+  - resolve
 ---
 
 # :handshake: Promise
 
 <TagLinks />
 
-* A way to deal with asynchronous events
-* A Promise Object can either succeees and return `resolve` or will fail and return `reject`
-* Replaces functions accpeting `successCallback` and `FailureCallback`
+- A way to deal with asynchronous events
+- A Promise Object can either succeees and return `resolve` or will fail and return `reject`
+- Replaces functions accpeting `successCallback` and `FailureCallback`
+
+![javascript promises](../../assets/js/javascript-promises.png)
 
 <Dot code="digraph { node [fontsize=24, colorscheme=set312, style=filled] node [fontname=Helvetica] Promise [fillcolor=2 shape=component width=5] Pending [fillcolor=9 shape=note] Resolve [fillcolor=7] Reject [fillcolor=4] edge [penwidth=2 style=dashed, color=grey] Promise -> Pending [label=asynchronousActivity] Pending -> Promise edge [style=solid color=black] Promise -> Resolve Promise -> Reject }" />
 
-![javascript promises](../../assets/js/javascript-promises.png)
+<br><br>
 
 ## :clipboard: Unit Test Report
 
@@ -29,6 +31,5 @@ tags:
 ## :factory: How to test Promises?
 
 <<< @/../src/promise/promises.test.js#snippet
-
 
 <Footer />

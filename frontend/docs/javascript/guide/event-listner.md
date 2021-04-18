@@ -71,7 +71,9 @@ How to stop event propagation via bubbling? it could be undesired after its hand
 
 : Any event handler can decide to stop the propagation via `event.stopPropagation()`
 
-::: danger stopping propagation pitfalls
+    Can stop bubbling in case it has interfering with or has side effects with other event listeners `stopPropagation()`
+
+::: warning stopping propagation pitfalls
 For instance:
 
 1. We create a nested menu. Each submenu handles clicks on its elements and calls stopPropagation so that the outer menu won’t trigger.
@@ -80,17 +82,28 @@ For instance:
 
 :::
 
-What is Event **Deligation?**
+What is **Event Deligation?**
 
 : Event delegation provides the simplest way to listen for events on ==multiple elements== or ==future elements== which are **not** yet added to DOM but will be added eventually in future.
 
     ::: tip Event Deligation
     Query the Elements in DOM, then sequentially assign same eventListener to all selected elements
 
-    :heavy_plus_sign: Event listener behaviour re-use!
+    :heavy_plus_sign: Event listener **behaviour re-use!**
     :::
 
     With a traditional approach, attaching listeners to specific elements, you would need to add a new listener every time you added a field. With event delegation, you can setup your listener once and not have to worry about it, ==since it checks selectors at time of click rather than when the DOM is initially rendered.==
+
+    Same even listener to multiple elements, all elements with same class? Event Deligation
+
+    ```js
+    //event deligation
+    var clickMe = document.querySelectorAll('.click-me');
+    for (var i = 0; i < clickMe.length; i++) {
+    clickMe[i].addEventListener('click', function (event) {
+        // Do stuff... }, false);
+    }
+    ```
 
 What happens when using multiplt Event Handlers?
 
@@ -121,22 +134,11 @@ Vanilla js event listners vs jQuery event listners?
     </code-block>
     </code-group>
 
-Same even listener to multiple elements, all elements with same class? Event Deligation
-
-```js
-//event deligation
-var clickMe = document.querySelectorAll('.click-me');
-for (var i = 0; i < clickMe.length; i++) {
-  clickMe[i].addEventListener('click', function (event) {
-    // Do stuff... }, false);
-}
-```
-
 Difference between and when to use event.preventDefault(), event.stopPropagation() and return false?
 
 When is `preventDefault` useful?
 
-: When assigning a event handler on anchor tag element with `href` attribute, default behaviour is on click browser will navigate to href. You can prevent that ans assign you own custom click event handler
+: When assigning a event handler on anchor tag element with `href` attribute, default behaviour is on click browser will navigate to href. You can prevent that and assign you own custom click event handler
 
 ## [React synthetic Events](https://reactjs.org/docs/events.html)
 

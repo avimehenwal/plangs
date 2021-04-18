@@ -1,27 +1,34 @@
 ---
 title: Cypress
 tags:
-- cypress
-- library
-- javascript
-- testing
+  - cypress
+  - library
+  - javascript
+  - testing
 ---
 
 # Cypress
 
 <TagLinks />
 
-* Increabibly Visual tool
-* Time Travel features, hover on action to get a snapshot of app state
+::: quote
+Every time I debug ci, the less I understand how we possibly can land and operate rovers
+on other planets.
+
+Probably they dont use javascsript.
+:::
+
+- Increabibly Visual tool
+- Time Travel features, hover on action to get a snapshot of app state
 
 ## Selenium
 
 > Statelless HTTP api
 
-* Selenium came in 2004, webdriver
-* back in the day, AJAX wasent even a thing
-* everything was synchronous
-* on every submit, there was a page refresh
+- Selenium came in 2004, webdriver
+- back in the day, AJAX wasent even a thing
+- everything was synchronous
+- on every submit, there was a page refresh
 
 ::: warning devtools
 When chrome driver is automation browser, you cannot use devtools
@@ -46,15 +53,15 @@ click A "https://www.wikipedia.org/" "Click to open wikipedia"
 
 ## Cypress
 
-* chai, mocha like api
-* with jquery like slector api
-* Everything returns Promises under the hood
-* Command chaning
-* Can test CSS Animations
+- chai, mocha like api
+- with jquery like slector api
+- Everything returns Promises under the hood
+- Command chaning
+- Can test CSS Animations
 
-* Create a global user for application before startup `win.user = { ... }`
-* set some `localStorage` value like auth-token
-* Force server to return 500 status on POSt request
+- Create a global user for application before startup `win.user = { ... }`
+- set some `localStorage` value like auth-token
+- Force server to return 500 status on POSt request
 
 ```js
 cy.server
@@ -62,40 +69,32 @@ cy.server
   .as("postBlog)
 ```
 
-* Currently built on top of [electron](https://www.electronjs.org/)
-* run in headless mode on CI
-* 100s of pages of documentation
-* Mobile web - yes
-* Native mobile - No
-
-::: theorem
-Every time I debug CI, the less I understand how we possibly can land and operate rovers
-on pther planets.
-
-Probably they dont use javascsript.
-:::
+- Currently built on top of [electron](https://www.electronjs.org/)
+- run in headless mode on CI
+- 100s of pages of documentation
+- Mobile web - yes
+- Native mobile - No
 
 ## Testing tool Challenges
 
-* Cross browser testing
-* Animation/ CSS testing
-* More insights into failing tests
-* Quickly debuggable
-* Test Responsive desings
-* Test `async` functionalities
+- Cross browser testing
+- Animation/ CSS testing
+- More insights into failing tests
+- Quickly debuggable
+- Test Responsive desings
+- Test `async` functionalities
 
 ## Repos to check
 
-* https://github.com/gothinkster/realworld
-* https://github.com/thedaviddias/Front-End-Checklist
-* https://github.com/ossu/computer-science#pro-cs
-* https://github.com/ryanmcdermott/clean-code-javascript#table-of-contents
-* https://github.com/RealToughCandy/real-world-javascript-interview-questions
-* https://github.com/mbeaudru/modern-js-cheatsheet
-* https://github.com/sindresorhus/awesome
-* https://github.com/sindresorhus/awesome-nodejs
-* https://github.com/danistefanovic/build-your-own-x
-* https://github.com/firstcontributions/first-contributions
-
+- https://github.com/gothinkster/realworld
+- https://github.com/thedaviddias/Front-End-Checklist
+- https://github.com/ossu/computer-science#pro-cs
+- https://github.com/ryanmcdermott/clean-code-javascript#table-of-contents
+- https://github.com/RealToughCandy/real-world-javascript-interview-questions
+- https://github.com/mbeaudru/modern-js-cheatsheet
+- https://github.com/sindresorhus/awesome
+- https://github.com/sindresorhus/awesome-nodejs
+- https://github.com/danistefanovic/build-your-own-x
+- https://github.com/firstcontributions/first-contributions
 
 <Footer />

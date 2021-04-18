@@ -35,6 +35,8 @@ npx create-react-app my-app
 
 ## React Hooks
 
+![React hooks](../../.vuepress/public/img/webdev/react-hooks.jpg)
+
 ### useState Hook
 
 ::: warning Hooks

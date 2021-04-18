@@ -1,10 +1,10 @@
 ---
 title: Objects
 tags:
-- object
-- javascript
-- hash
-- hashmaps
+  - object
+  - javascript
+  - hash
+  - hashmaps
 ---
 
 # :memo: Objects
@@ -18,8 +18,8 @@ This way you are sure you are seeing the value of obj at the moment you log it. 
 :::
 
 How to pretty print Objects in console for debugging?
-:   The [JSON.stringify() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-    converts a JavaScript object or value to a JSON string,
+: The [JSON.stringify() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+converts a JavaScript object or value to a JSON string,
 
     ```js
     JSON.stringify(value[, replacer[, space]])
@@ -27,5 +27,12 @@ How to pretty print Objects in console for debugging?
 
     [JSON.Parse reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
+## Object Operations
+
+> Associative Arrays
+
+- CRUD operations
+- object Destructuring
+- factory functions
 
 <Footer />

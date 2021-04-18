@@ -98,7 +98,7 @@ Main thread is responsible for
 - JS Objects and prototype Inheritance, chaining and `bind`
 - Hoisting?
 - `NaN` Not A Number
-- Closure, combination of functions with local/provate viariables
+- [Closure](../javascript/guide/iife.md), combination of functions with local/provate viariables
 - How to manipulate DOM?
 - How to add event Listeners?
 - [How to make network calls? fetch vs axios](https://blog.logrocket.com/axios-or-fetch-api/)
@@ -169,6 +169,7 @@ CSS has been acound since netscape navigator and various browsers have implement
 - commenting systems
 - File upload, drag and drop areas
 - Loading bars/icons
+- SPA using vanilla JS, no page refreshes
 
 ## Common Operations
 

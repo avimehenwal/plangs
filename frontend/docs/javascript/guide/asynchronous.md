@@ -1,11 +1,11 @@
 ---
 title: Asynchronous Programming
 tags:
-- asynchonous
-- callback
-- promise
-- async
-- await
+  - asynchonous
+  - callback
+  - promise
+  - async
+  - await
 ---
 
 # :spider_web: Asynchronous Programming
@@ -24,34 +24,42 @@ tags:
 3. [Async/await](./promise.md)
 
 Built to be used with web browser. Why?[^2]
-:   Eliminate browser freezes[^1].
+: Eliminate browser freezes[^1].
 
     Because users can interact with webpage [TTI] only after HTML and CSS are loaded and parsed.
     JS execution could be deffered. Asynchronocity helps browsers to be more responsive towards user interactions.
 
-* Normally execution is synchronous, function waits for the response of the called function before proceeding with further execution
-* Blocking code | Non-blocking code
+- Normally execution is synchronous, function waits for the response of the called function before proceeding with further execution
+- Blocking code | Non-blocking code
 
 When do we generally use asynchronous programming[^2]? aka non-blocking programming?
-:  When we have to implement features like.
+: When we have to implement features like.
 
-   1. [x] timer functions
-   2. [x] listening to network call, database query calls etc
-   3. [x] reading or writing, generally to/from and IO device
-   4. [x] subscribing to an event, topic in pub/sub
-   5. [x] EventListners
+1.  [x] timer functions
+2.  [x] listening to network call, database query calls etc
+3.  [x] reading or writing, generally to/from and IO device
+4.  [x] subscribing to an event, topic in pub/sub
+5.  [x] EventListners
+
+## Async - await
+
+::: tip Arrow function
+Arrow functions `=>` have an **implicit return feature**
+:::
+
+- are **not** hoisted
+- always anonymous, lambda functions
 
 ## :school: References
 
 [^1]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts
 [^2]: https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)
 
+[tti]: https://web.dev/interactive/
 
-[TTI]: https://web.dev/interactive/
-
-*[TTI]: Time to Interactive performance metrics
-*[HTML]: Hypertext Markup Language, current spec 5
-*[CSS]: Cascading style Sheets, current spec 3
-*[JS]: Ecmascript Standard
+_[TTI]: Time to Interactive performance metrics
+_[HTML]: Hypertext Markup Language, current spec 5
+_[CSS]: Cascading style Sheets, current spec 3
+_[JS]: Ecmascript Standard
 
 <Footer />

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <footer>
 
   <!-- <form action="https://www.getrevue.co/profile/avimehenwal/add_subscriber"
   method="post" id="revue-form" name="revue-form"  target="_blank">
@@ -52,7 +52,11 @@
     </div>
 
     <Vssue :title="this.$page.title" />
-  </div>
+
+    <p><small>If you like my work and think it was helpful kindly support my work</small></p><br>
+    <a href="https://www.buymeacoffee.com/F1j07cV" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
+  </footer>
 </template>
 
 <script>
