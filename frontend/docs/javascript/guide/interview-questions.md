@@ -55,4 +55,24 @@ class LinkedListNode {
 // createa list from bunch of values
 ```
 
+[What is the difference between `typeof` and `instanceof`?](https://stackoverflow.com/questions/899574/what-is-the-difference-between-typeof-and-instanceof-and-when-should-one-be-used)
+: Use typof for primitive data-types and `instanceof` for custom types
+
+    ```js
+    callback instanceof Function
+    typeof callback == "function"
+    ```
+
+## Resources
+
+- https://www.thedataincubator.com/12day.html
+- https://runestone.academy/runestone/books/published/pythonds/BasicDS/toctree.html
+
+## Problem Solving
+
+- Drag and drop like trello
+- Sum of items in array (which can containe multiple arrays recursively)
+- Add drawing canvas, real editor in browser
+- calculator app using react
+
 <Footer />

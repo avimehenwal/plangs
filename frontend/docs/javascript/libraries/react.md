@@ -21,6 +21,9 @@ Why we need a frontend web framework in the first place? What problem does it so
 : To work with javascript little bit easier and organised. Good for managing enterprise level projects
 
     * Provides built in reactivity
+    * [ ] Inject a Component
+    * [ ] Update a Component
+    * [ ] Remove a Component from DOM
 
 Bootstrap new react app
 
@@ -71,12 +74,12 @@ ref vs state? Difference?
 
 ### useEffect Hook
 
-> Anything we somethign something to change depending on s props, state, variable change, component mount/unmount use this hook
+> Anything we somethign something to change depending on s props, state, variable change, **component mount/unmount** use this hook
 
 - inside a function component we dont have lifecycle hooks at all. All we have is useEffect hook
 - We want something to change in component, on a sideffect
 - Run hook only when a specific thing (2nd param) changes
-  - if you pass an empty array, `useEffect` will only run once onMount, because empty array doesnt changes.
+  - if you pass an empty array, `useEffect` will only run once onMount, ==because empty array doesnt changes.==
 
 ```jsx
 useEffect(() => {
@@ -184,7 +187,7 @@ classDef purple fill:#f9f,stroke:#333,stroke-width:0px;
 - [ ] Portability
 - [ ] Security
 
-* **MVC** vs **MV-VC** approach paradigm
+* [MVC vs MV-VC approach paradigm diff?](https://stackoverflow.com/questions/667781/what-is-the-difference-between-mvc-and-mvvm)
 
 How UI Interfaces are built?
 
@@ -222,13 +225,16 @@ There are four main types of ReactJS components:
 3. Presentational (or high-order) components
 4. Container components
 
-> Google has built **15,000** components for its internal use
+::: tip components @google
+Google has built **15,000** components for its internal use
+:::
 
-1990 | HTML 1 | body h a img ul/li
-1995 | HTML 2 | INPUT FORM SELECT
-2016 | html 5 | AUDIO VIDEO CANVAS
-
-1970 | UNIX | reusable little programs
+| Timeline | Tech   | Description              |
+| -------- | ------ | ------------------------ |
+| 1970     | UNIX   | reusable little programs |
+| 1990     | HTML 1 | body h a img ul/li       |
+| 1995     | HTML 2 | INPUT FORM SELECT        |
+| 2016     | html 5 | AUDIO VIDEO CANVAS       |
 
 > Be like **g/re/p**
 
@@ -370,7 +376,7 @@ React is more polular than **renewable energy**, **orange juice** on google sear
 | `useState`   | set/get local states                                                                                  |
 | `useEffect`  | SideEffects = data fetching, subscriptions, or manually changing the DOM from React components before |
 | `useContext` | subscribe to React context without introducing nesting                                                |
-| `useReducer` | manage local state of complex components with a reducer                                               |
+| `useReducer` | manage local state of complex components with a reducer function dispatching actions                  |
 
 How to build your own hooks?
 
@@ -496,6 +502,31 @@ Real-Time webapp to conduct instant Polls
 | more          | Popularity, Talent                  | less       |
 |               | Startup time, runtime performance   |            |
 
+## React Interview
+
+- Counter App
+- React router with Navigation and Main component (which changes)
+- Fetch a API and load contents in a component, the uglier the better
+- Featch API and display contents nicely
+- Paginate and append the content to feed (twitter, fb like effect), nextpage token?
+- Full text search and filter search results
+- [Unidirectional Data flow in react?](https://flaviocopes.com/react-unidirectional-data-flow/)
+- props vs states vs local Variables
+- lift states up?
+- What are `refs` in react? `useRef`
+- When can you use the hooks?
+  - call hooks only at the top level
+  - not inside loops, conditions or nested functions
+  - call hooks from custom components
+- Upgrading class to functions, use one route at a time
+
+| Lifecycle stages | Hooks Name                                |
+| ---------------- | ----------------------------------------- |
+| Intial Render    | `useEffect(,[])`                          |
+| Updates          | `useMemo()`, `useEffect(,[watchState])`   |
+| UnMount          | `useEffect()` return fn with cleanup jobs |
+| Debug            | useDebug()                                |
+
 ## Q&A
 
 - [Difference b/w imperative and declerative programming?](https://stackoverflow.com/questions/33655534/difference-between-declarative-and-imperative-in-react-js)
@@ -516,6 +547,18 @@ Real-Time webapp to conduct instant Polls
 - Capturing vs Bubling EventListners?
 - Github to host images https://raw.githubusercontent.com/avimehenwal/plangs/master/docs/assets/img/devtools-snippets.eea2f4f7.png
   - `https://raw.githubusercontent.com/UserName/NameRepo/Branch/NameImg.png`
+
+## Coding Criteria
+
+- Is the code well-structured and readable?
+- Is the BPMN modeller attached to the DOM using `ref`?
+- Does your app do what it should do?
+- Did you pay attention to details?
+- Is the BPMN modeller being rendered and fully visible?
+- Can a user search for a framework case-insensitively?
+- Does the displayed list of items contain title and description?
+- Is the console free of errors and warnings?
+- Have you used any ES6+ features?
 
 [blog]: https://reactjs.org/blog/2020/10/20/react-v17.html
 [docs]: https://reactjs.org/tutorial/tutorial.html

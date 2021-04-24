@@ -74,5 +74,43 @@ outer(); // 3
 ## Arrays
 
 - How to add and remove from **start** and **end** of array? `push`, `pop`, `unshift`, `shift`
+- Test if item in array `array.includes(item)`
+
+## JSON and Objects
+
+javascript can parse JSON (string) easily, `Objects` require more tokenization parsing processing
+
+```mermaid
+graph LR
+A(JS Object):::yellow
+B(JSON String):::blue
+
+A ==JSON.stringify==> B
+B --JSON.parse--> A
+
+classDef yellow fill:#FFE873,stroke-width:0px;
+classDef blue fill:#b8d4ff,stroke-width:0px;
+```
+
+## Modules System
+
+commonJS, UMD, AMD, ES6 Modules
+
+```ts
+import * as React from "react";
+const { useState } = React;
+```
+
+## Diff b/w == and ===
+
+| operator | description                        |
+| -------- | ---------------------------------- |
+| ==       | checks only **values**             |
+| ===      | checks both **type** and **value** |
+
+```js
+1 == "1" ? console.log("T") : console.log("F");
+1 === "1" ? console.log("T") : console.log("F");
+```
 
 <Footer />
