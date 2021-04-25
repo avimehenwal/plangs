@@ -3,6 +3,7 @@ title: React Hooks
 tags:
   - react
   - hooks
+  - router
 ---
 
 # React Hooks
@@ -119,10 +120,14 @@ Usinf async/await with useEffect?
 
 ## useReducer
 
+![dispatch action strings as best practise](../../.vuepress/public/img/js/string-identifiers-best-practise.png)
+
 - complex state changes in React components.
 - These actions end up in a reducer function to calculate the next state:
 - Reducer function takes a `state` and **action**
 - Action might havr a `type` and `payload`
+
+![spread operator in react reducer](../../.vuepress/public/img/js/spread-operator-react-reducer.png)
 
 ```mermaid
 graph LR
@@ -157,6 +162,9 @@ classDef green fill:#1f9,stroke-width:0px;
 
 Accepts a context object (the value returned from `React.createContext`) and
 returns the current context value for that context
+
+- Which components can access global store data? Provide to components?
+- Basic setup, writing to use `useContext`?
 
 ## useCallback and useMemo
 
@@ -203,10 +211,24 @@ The signature is identical to useEffect, but it fires synchronously after all DO
 
 useDebugValue can be used to display a label for custom hooks in React DevTools.
 
+## react-router-dom
+
+> Make **Bookmarkable** app states
+
+- Make router available to the parts of app that would need it.
+- How to add new route? and render new components?
+- `Link`, `Route`, `Switch exact` to only 1 component from list, `path="/g/:gistId"`
+  - then app finds and filters `gistId` from the available collection
+- Can use slots, this.props.children pattern or pass as props
+- [Common pitfalls](https://medium.com/@shoaibbhimani1392/react-router-frequently-faced-problems-f7d30d02087e)
+
 ## Exercises
 
 - Build trello like drag and drop area
 - Trading Platform like buy/sell options
 - [Production Use cases of hooks](https://stackoverflow.com/questions/66429202/what-are-production-use-cases-for-the-useref-usememo-usecallback-hooks)
+- https://github.com/gopinav/React-Tutorials
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zxP4oGejqpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <Footer />

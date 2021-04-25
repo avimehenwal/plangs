@@ -36,6 +36,8 @@ const combinedArray = [...alphabet, ...numbers]
 const combinedArray = alphabet.concat(numbers)
 ```
 
+![spread operator in react reducer](../../.vuepress/public/img/js/spread-operator-react-reducer.png)
+
 ## Desctructuring in Functions
 
 - JS functions [Can not return multiple values](https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript), but we can use destructuring and return objects and arrays from functions.
@@ -57,6 +59,8 @@ const { first, second, third = "not defined" } = getValues();
 ```
 
 :::
+
+![Function spread operator](../../.vuepress/public/img/js/spread-operator.png)
 
 ## Object Desctructuring
 

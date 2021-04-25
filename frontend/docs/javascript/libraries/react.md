@@ -124,6 +124,8 @@ function Counter() {
 }
 ```
 
+![global state pattern](../../.vuepress/public/img/js/global-states.png)
+
 ## Patterns
 
 > For long-term maintainability, if there is a problem, we should be able to fix it.
@@ -399,7 +401,19 @@ the way to `document`.
 - How to Control Event handling to happen **ONLY** one time?
 - How to dynamically remove a eventListner after certain condition like 5 times?
   - `.removeEventListner()`
--
+
+::: tip ponder on
+Where the **change** is commming from? inside or outside?
+:::
+
+| Can they?                                    | props | state |
+| -------------------------------------------- | ----- | ----- |
+| Can get initial value from parent Component? | Yes   | Yes   |
+| Can be changed by parent Component?          | Yes   | No    |
+| Can set default values inside Component?\*   | Yes   | Yes   |
+| Can change inside Component?                 | No    | Yes   |
+| Can set initial value for child Components?  | Yes   | Yes   |
+| Can change in child Components?              | Yes   | No    |
 
 ### Deployment
 
@@ -549,6 +563,9 @@ Real-Time webapp to conduct instant Polls
   - `https://raw.githubusercontent.com/UserName/NameRepo/Branch/NameImg.png`
 
 ## Coding Criteria
+
+> First break the App into ==component tree with Hierarchy==
+> Then identify states and props
 
 - Is the code well-structured and readable?
 - Is the BPMN modeller attached to the DOM using `ref`?
