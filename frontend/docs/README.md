@@ -3,7 +3,7 @@ home: true
 heroImage: /svg/nomad.svg
 tagline: javascript notes
 actionText: Start 👉
-actionLink: /tags.html
+actionLink: /javascript/
 features:
   - title: ⏱ Asynchronous Programming
     details: respons to async events and callbacks

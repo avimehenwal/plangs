@@ -36,9 +36,24 @@ How to write Web Socket API client (included with browsers) and server?
 
 ## web socket client API
 
-- Connection events `open`, `message`, `close`
+- Connection events `open`, `message`, `close`, `send`
 
 > WebSockets as REST APIs
+
+```js
+useEffect(() => {
+  wsc.current = new WebSocket("ws://localhost:8080");
+  wsc.current.onopen = (msg) =>
+    console.log("wsc opened " + JSON.stringify(msg));
+  wsc.current.onclose = (msg) =>
+    console.log("wsc closed " + JSON.stringify(msg));
+  wsc.current.message = (msg) => console.log("recieved " + JSON.stringify(msg));
+
+  return () => {
+    wsc.current.close();
+  };
+}, []);
+```
 
 ## Use clases
 
@@ -67,6 +82,7 @@ How to write Web Socket API client (included with browsers) and server?
 - How to uniquely identify each client?
 - [High volume storage backends for WS?](https://stackoverflow.com/questions/21386318/storage-backend-based-on-websockets)
 - [Express vs Django?](https://stackoverflow.com/questions/57945868/djangorest-vs-expressjs-which-1-should-i-choose-to-build-rest-api)
+- [web socket client using react hooks](https://stackoverflow.com/questions/60152922/proper-way-of-using-react-hooks-websockets)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/khULSvz_hdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
