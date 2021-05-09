@@ -67,6 +67,17 @@ Difference between implements and extends a class ?
 
     Implements a new class means,
 
+## Generic Types
+
+Creating types from types
+
+- How to add **constraints** to generic types? extend generic to interface
+
+## Advanced Typescript
+
+- How to make an array immutable? `const a = [1,2,3,4,5] as const`
+- How to let ts check if an array has an index? `const b = a[10]`
+
 ## :closed_book: References
 
 <Footer />

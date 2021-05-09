@@ -18,6 +18,14 @@ traditional programming languages
 
 ![javascript __proto__](../../assets/tests/js__proto__.png)
 
+Destructuring
+
+```ts
+const { length } = "A string";
+console.log(length);
+// 8
+```
+
 ## References
 
 - https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript

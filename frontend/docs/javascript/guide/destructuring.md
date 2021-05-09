@@ -20,7 +20,9 @@ ES6 Feature
 > Smaller workable chunks
 > Or combining them
 
-Using spread Operator
+### Using spread Operator
+
+to create a shallow copy
 
 ```js
 const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']

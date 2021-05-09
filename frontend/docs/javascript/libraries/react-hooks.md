@@ -51,6 +51,8 @@ Close websocker connection after opened in useEffect
 
 ## custom Hook
 
+- Persist input value in local storage and backend server
+
 How to reuse component logic using customHooks?
 : try this
 
