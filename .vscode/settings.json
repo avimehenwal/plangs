@@ -29,6 +29,7 @@
         "search",
         "post",
         "typescript",
-        "clojure"
+        "clojure",
+        "swift"
     ]
 }

@@ -55,6 +55,26 @@ Difference between javascript function and assigning function to a variable?
 
 ![js const is flawed](../../.vuepress/public/img/webdev/js-const.png)
 
+```ts
+const fb: string = "facebook";
+const inst: string = "instagram";
+// const x: string | null | undefined | '' = 'http:xing'
+const x: string | null | undefined | "" = null;
+
+// its horibble
+const text = `
+facebook  = ${fb}
+${x}
+${x ? x : ""}
+${x ? x : null}
+${x && x}
+${x ?? x}
+instagram = ${inst}
+`;
+
+console.log(text);
+```
+
 ## Javascript Closures
 
 ```js
