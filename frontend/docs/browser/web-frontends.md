@@ -171,6 +171,10 @@ CSS has been acound since netscape navigator and various browsers have implement
 - Loading bars/icons
 - SPA using vanilla JS, no page refreshes
 
+## How to identify what to decouple?
+
+- Single Responsibility Principle
+
 ## Common Operations
 
 How to remove a block of elements from DOM?

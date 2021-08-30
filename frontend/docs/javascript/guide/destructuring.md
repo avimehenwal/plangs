@@ -102,4 +102,24 @@ printJson(someJson);
 
 ### Destructuring on Function Parameters
 
+### Is destructuring performant ?
+
+```js
+const example1 = (props) => {
+  const color = props.color;
+  return <h1 style={{ color }}>Hello</h1>;
+};
+
+const example2 = (props) => {
+  const { color } = props;
+  return <h1 style={{ color }}>Hello</h1>;
+};
+
+const example3 = ({ color }) => {
+  return <h1 style={{ color }}>Hello</h1>;
+};
+```
+
+[As of 2018, function destructuring on v8 seems to be more verbose](https://stackoverflow.com/questions/47099510/destructuring-variables-performance)
+
 <Footer />
