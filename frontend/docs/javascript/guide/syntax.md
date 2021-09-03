@@ -133,4 +133,14 @@ const { useState } = React;
 1 === "1" ? console.log("T") : console.log("F");
 ```
 
+### Variable Arguments, Parametric Polymorphism
+
+```ts
+function variableArguments(...args: any[]) {
+  console.log(args.length);
+  console.log(...args);
+}
+variableArguments("hello", "how", "are", "yo", 4, 3, 2);
+```
+
 <Footer />

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps</title>
+
+  <style>
+    body {
+      background-color: lightgray;
+    }
+
+    h2 {
+      color: brown;
+    }
+
+    input {
+      width: 500px
+    }
+  </style>
+
+  <!-- dynamically inject script onMount and remove onUnmount -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-OZ5uC6AKNkYRX0e5naFKr7xoS0RCdsg&libraries=places&callback=initAutocomplete"
+    defer async></script>
+</head>
+
+<body>
+  <h2>Google Maps Autocomplete</h2>
+  <input id="autocomplete" placeholder="Enter a place" type="text" autocomplete="on" width: 500px; />
+  <pre id="details">... selected </pre>
+
+  <script>
+    let autocomplete;
+    function initAutocomplete() {
+      autocomplete = new google.maps.places.Autocomplete(
+        // useRef
+        document.getElementById("autocomplete"),
+        // api controls
+        {
+          types: ['address'],
+          componentRestrictions: { 'country': ['DE'] },
+          // fields: ['street_number', 'name']
+        })
+
+      autocomplete.addListener('place_changed', onPlaceChanged)
+    }
+
+    function onPlaceChanged() {
+      var place = autocomplete.getPlace()
+      if (!place.geometry) {
+        document.getElementById("autocomplete").placeholder = 'Enter a place'
+      } else {
+        document.getElementById("details").innerHTML = JSON.stringify(place, null, 2)
+        // document.getElementById("details").innerHTML = place.name
+      }
+
+    }
+  </script>
+</body>
+
+</html>

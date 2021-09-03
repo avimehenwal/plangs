@@ -162,11 +162,21 @@ classDef green fill:#1f9,stroke-width:0px;
 
 ## useContext
 
+> How to broadcast variables (theme, viewport-sizes, padding-margins) implicitly to all enclosed components?
+
 Accepts a context object (the value returned from `React.createContext`) and
 returns the current context value for that context
 
 - Which components can access global store data? Provide to components?
 - Basic setup, writing to use `useContext`?
+
+#### Best Practises
+
+1. Use context sparingly
+2. Prefer **HoC** or react component **composition** | containment strategies alongwith IOC
+3. Multiple level of prop-drilling ? prefer props as JSX Functions, **render props**
+4. Because context uses **reference identity** to determine when to re-render, there are some gotchas that could trigger unintentional renders in consumers when a provider’s parent re-renders. Because new object are always created for context values.
+   1. to solve, lift up the value to component states
 
 ## useCallback and useMemo
 
