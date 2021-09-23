@@ -29,20 +29,17 @@
 
 <body>
   <h2>Google Maps Autocomplete</h2>
-  <input id="autocomplete" placeholder="Enter a place" type="text" autocomplete="on" width: 500px; />
+  <input id="autocomplete" placeholder="Enter a place_changed" type="text" autocomplete="on" width: 500px; />
   <pre id="details">... selected </pre>
 
   <script>
-    let autocomplete;
+    let autocomplete; w
     function initAutocomplete() {
       autocomplete = new google.maps.places.Autocomplete(
-        // useRef
         document.getElementById("autocomplete"),
-        // api controls
         {
           types: ['address'],
           componentRestrictions: { 'country': ['DE'] },
-          // fields: ['street_number', 'name']
         })
 
       autocomplete.addListener('place_changed', onPlaceChanged)

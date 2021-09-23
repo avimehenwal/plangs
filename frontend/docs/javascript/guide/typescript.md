@@ -72,6 +72,7 @@ Difference between implements and extends a class ?
 Creating types from types
 
 - How to add **constraints** to generic types? extend generic to interface
+- `interface GoogleMapContextType extends Partial<GoogleMap>`, [partial, readonly and required utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 
 ## Advanced Typescript
 

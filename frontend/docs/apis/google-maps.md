@@ -70,9 +70,11 @@ classDef yellow fill:#FFE873,stroke-width:0px;
 classDef blue fill:#b8d4ff,stroke-width:0px;
 ```
 
+[can I use autocomplete HTML attribute ?](https://caniuse.com/?search=autocomplete)
+
 ### How to use it? JS Implementations ?
 
-1. [js-api-loader](https://github.com/googlemaps/js-api-loader/blob/master/src/index.ts)
+1. Bootstrap google api JS sdk [js-api-loader](https://github.com/googlemaps/js-api-loader/blob/master/src/index.ts)
 2. Make your own implementation using web API standard
 
 ::: warning CORS
@@ -104,11 +106,30 @@ export default useScript;
 
 ## 3rd party libraries
 
-| library                    | what does it do?                                             |
-| -------------------------- | ------------------------------------------------------------ |
-| `googlemaps/js-api-loader` | creates a single (with id) script tag for google-maps        |
-| `PlacesAutocomplete`       | expects a render props function as props.children            |
-| vanilla JS                 | look for event and define right callback from google map API |
+| library                                                                       | what does it do?                                             |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [googlemaps/js-api-loader](https://github.com/googlemaps/js-api-loader)       | creates a single (with id) script tag for google-maps        |
+| [PlacesAutocomplete](https://github.com/hibiken/react-places-autocomplete)    | expects a render props function as props.children            |
+| [google maps react hooks](https://github.com/ubilabs/google-maps-react-hooks) | react context + custom hooks based pure react solution       |
+| vanilla JS                                                                    | look for event and define right callback from google map API |
+
+### Google Map React Hooks [GMRH]
+
+Exposing google maps functionality using react hooks (context + custom hooks)
+
+1. Inject remove and google-map script on page. After load provide object to be used
+
+## FAQ
+
+- [Difference between Google's Query and Place Autocomplete?](https://stackoverflow.com/questions/62121238/difference-between-googles-query-and-place-autocomplete)
+- [diff b/w document and window onload](https://stackoverflow.com/questions/588040/window-onload-vs-document-onload)
+- `onload` event could be listened for every element
+- What is the difference between `autocomplete` and `AutocompleteService` ? one is GUI with google widget, other is more text oriented, code-only version
+  - Plus Code, places which do not have a address yet! `698H+PX`
+- [Add script in `head` vs `body`?](https://stackoverflow.com/questions/38407962/when-to-use-the-script-tag-in-the-head-and-body-section-of-a-html-page/38408000)
+  - dependes on what is script supposed to do? Functions in head. If it changes HTML DOM then in body, bottom!
+
+![Script tag](/img/js/script-head-vs-body.png)
 
 <<< @/../src/vanilla/maps.html
 
@@ -116,10 +137,7 @@ export default useScript;
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uJYqQdnw8LE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## FAQ
-
-[Difference between Google's Query and Place Autocomplete?](https://stackoverflow.com/questions/62121238/difference-between-googles-query-and-place-autocomplete)
-
 [gmp]: https://developers.google.com/maps
+[gmrh]: https://github.com/ubilabs/google-maps-react-hooks
 
 <Footer />
