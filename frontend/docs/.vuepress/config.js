@@ -111,6 +111,7 @@ module.exports = {
         ]
       },
       { text: 'Rust', link: '/rust/', },
+      { text: 'Swift', link: '/swift/', },
       { text: 'Technology', link: '/technologies/', },
       { text: 'Test', link: '/test/', },
       { text: 'Blog', link: '/posts/', },

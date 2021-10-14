@@ -171,6 +171,19 @@ CSS has been acound since netscape navigator and various browsers have implement
 - Loading bars/icons
 - SPA using vanilla JS, no page refreshes
 
+## Multiple ways to submit Forms and form data
+
+There are multiple ways to submit a form from the browser:
+
+1. HTML form, submit button, user presses submit button, no Javascript involved.
+2. HTML form in the page, Javascript gets DOM element for the form and calls .submit() method on the form object.
+3. Ajax call using the XMLHttpRequest interface with the POST method and manually sending appropriate form data.
+4. Ajax Fetch call with the POST method and manually sending appropriate form data.
+
+## How to identify what to decouple?
+
+- Single Responsibility Principle
+
 ## Common Operations
 
 How to remove a block of elements from DOM?

@@ -67,6 +67,7 @@ class LinkedListNode {
 
 - https://www.thedataincubator.com/12day.html
 - https://runestone.academy/runestone/books/published/pythonds/BasicDS/toctree.html
+- https://dmitripavlutin.com/simple-but-tricky-javascript-interview-questions/
 
 ## Problem Solving
 

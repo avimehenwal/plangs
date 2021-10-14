@@ -10,6 +10,8 @@ tags:
 
 <TagLinks />
 
+> UI is a function of the current state of application
+
 - Generate and return content from javascript
 - How to reusestateful logic between components?
   - Use react lifecycle hooks
@@ -493,6 +495,8 @@ Real-Time webapp to conduct instant Polls
 - Creating new JS modules does not makes an app modular
 - Enforce coding constraints using CI/CD automation
   - Fail build whenever any new code depends on a specific portion
+
+![Seperation of concern](../../assets/architecture/sepertion-of-concern.png)
 
 ## JAM Stack
 
