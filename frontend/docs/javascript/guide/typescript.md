@@ -71,7 +71,51 @@ Difference between implements and extends a class ?
 
 Creating types from types
 
-- How to add **constraints** to generic types? extend generic to interface
+- Get better type definitions
+- How to add **constraints** to generic types? extend generic to interface?
+- How to constrain generic type definitions? `extends`
+- How to use Generics with Interfaces?
+- How to use generics with react hooks? and functional components?
+- HOw to override `useState` generic?
+- How to use a render Prop with generics?
+
+```ts
+type numarr = Array<number>;
+type strarr = Array<string>;
+
+const makeArr = <X, Y>(x: X, y: Y): [X, Y] => {
+  return [x, y];
+};
+
+<T extends {firstname: string; lastname: string}>
+
+interface Tab<T> {
+  id: string;
+  data: T
+}
+
+type NumberTab = Tab<number>
+type StringTab = Tab<string>
+
+// react Functional Component
+interface Prop {
+  name: string
+}
+
+const HelloWorld: React.FC<props> = ({name}) => (
+  <div>Hello {name}!</div>
+)
+
+// render props
+interface FormProps<T> {
+  values: T
+  children: (values: T) => JSX.Element
+}
+
+const Form = <T extends {}>({values, children}: FormProps<T>) => {
+  return (children(values))
+}
+```
 
 ## Advanced Typescript
 
@@ -79,5 +123,7 @@ Creating types from types
 - How to let ts check if an array has an index? `const b = a[10]`
 
 ## :closed_book: References
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nViEqpgwxHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <Footer />
