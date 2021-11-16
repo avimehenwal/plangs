@@ -58,10 +58,30 @@ click A "https://en.wikipedia.org/wiki/Dart_(programming_language)" "Click to op
 - Why did flutter choose dart?
 - FLutter SkIA has its own rendering engine written in C++
 - fast == 60 FPS and multi-platform
--
+
+## client-side dart -> html mapping
+
+```
+import 'dart:html';
+```
+
+| HTML tag  | Dart class   |
+| --------- | ------------ |
+| `<input>` | InputElement |
+| `<ul>`    | UListElement |
+| `<li>`    | LIElement    |
+
+## Questions
+
+- Is dart (C++) faster than python (cPython) ?
+  - [Apparently](https://programming-language-benchmarks.vercel.app/dart-vs-python)
 
 ## Add Ons
 
 - [PWA's with dart](https://pub.dev/packages/pwa)
+
+## Free Resources
+
+- https://github.com/fangwei716/30-days-of-react-native
 
 <Footer />
