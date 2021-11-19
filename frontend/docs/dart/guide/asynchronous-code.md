@@ -9,18 +9,19 @@ tags:
 
 <TagLinks />
 
-- Single thread (by default) **MUTATOR THREAD** aka main Isolate
+- Single thread (by default) **MUTATOR THREAD** aka ==main Isolate==
 - Asynchronous programming is implemented using **task event queue**, just like JS
-- Isolate are seperate memories for asynchronous tasks in VM memory
+- ==Isolate== are seperate memories for asynchronous tasks in VM memory
 - Dart execution is single threaded, but language has other threads running
   - like **HELPER THREAD** for cleanup garbagge collection
 
 ## Isolates
 
-Isolates are EXPENSIVE
+::: tip Isolates are EXPENSIVE
 
-150 isolates takes up 850 MB of RAM
-1000 isolates can take upto 4.5 GB of RAM, which is a lot for a mobile phone
+- **150** isolates takes up **850 MB of RAM**
+- **1000** isolates can take upto ==4.5 GB of RAM==, which is a lot for a mobile phone
+  :::
 
 ## Futures and Streams and Microtasks
 

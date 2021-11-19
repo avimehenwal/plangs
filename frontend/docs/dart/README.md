@@ -5,18 +5,12 @@ tagline: dart notes
 actionText: Start 👉
 actionLink: /dart/guide/
 features:
-  - title: ⏱ Asynchronous Programming
-    details: Asynchronous execution using callbacks, Promises and async/await function calls
-  - title: 🔢 Dynamically Typed
-    details: ability to use the typed versions using babel or typescript or continue using dynamic variable types
-  - title: 🔀 (client + server) side scripting
-    details: programm both client and serve using same language
-  - title: 🔧 JIT Compiler
-    details: just-in-time compilation using v8 engine and turbofan optimization
-  - title: 🌏 Program the web and much more
-    details: virtual DOM based frameworks, electron, unity
-  - title: 🔉 translate to WASM
-    details: convert to wasm using Assembly script
+  - title: ⏱ Apps for nay screen
+    details: build multi-platform apps. cross mobile, cross platform apps, even embedded app from single codebase
+  - title: 🔢 Native Performance
+    details: dart compiles to ARM 64, x64, javascript
+  - title: 🔀 Tooling
+    details: stateful hot-reloading, build, compile, run tests
 footer: Made with ❤️ by Avi Mehenwal
 ---
 

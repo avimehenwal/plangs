@@ -4,6 +4,8 @@ tags:
   - flutter
   - state
   - management
+  - pattern
+  - bloc
 ---
 
 # Flutter State Management
@@ -11,6 +13,12 @@ tags:
 <TagLinks />
 
 [Reactive Programming Streams - BLoC Patern](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/)
+
+- cubit is merged into bloc library
+
+## BLoC vs flutter_block
+
+https://bloclibrary.dev/#/gettingstarted
 
 ## Why BLoC?
 
@@ -52,6 +60,35 @@ tags:
 | BlockBuilder  | re build the UI on state change                         |
 | BlockListener | only listen for change, single time unlike BlockBuilder |
 | BlocConsumer  | mixture of BlockListener and BlockProvider              |
+
+## Steps
+
+1. Define a block by overriding its methods and then initialize it by calling its super
+2. Register Events on BloC using `on` API
+   1. define state changes in `on` callback function which accepts `event` and `emit`
+   2. modified states changes are `emitted`
+3. Using the Block in UI Widgets
+   1. BlockProvide creates a instance of a bloc and all it's chold have access
+   2. create an instance of BlocComponent as `final` and then call events on it using `add` API
+   3. wait for events to deliver a response `await Future.delayed(Duration.zero)`
+
+::: tip wait for evnt-loop
+`await Future.delayed(Duration.zero)` is added to ensure we wait for the
+next event-loop iteration (allowing the EventHandler to process the event).
+:::
+
+4. For RT subscriptions to changes, use Streams >> Futures
+
+```dart
+Future<void> main() async {
+  final bloc = CounterBloc();
+  final subscription = bloc.stream.listen(print); // 1
+  bloc.add(Increment());
+  await Future.delayed(Duration.zero);
+  await subscription.cancel();
+  await bloc.close();
+}
+```
 
 ## Enterprise App source organization
 
@@ -121,5 +158,50 @@ Let UI emit the events
   - onCreated
   - onClose
 - `BlocObserver`
+
+::: tip BlocObserver
+When we want to be able to do something in response to **all Changes** we can simply create our own BlocObserver.
+:::
+
+## Data Fetching over network
+
+::: tip data fetching in build method
+Although it’s convenient, it’s not recommended to put an API call in a `build()` method.
+:::
+
+- Make networl call using `http` library using Futures is easy, but working with response is hard
+- Transform http.response --> Dart Object, using Models in repository
+- [Flutter data fetching](https://docs.flutter.dev/cookbook/networking/fetch-data)
+- Whent to make the netwrk call?
+  - exactly once? `initState`
+    - `MyApp` widget becomes ==stateful== when app wants data from API on initial load
+  - based on event emitted?
+- How to display the data on UI?
+  - `FutureBuilder` widget
+- How to use an existing BloC on abother page? `BlocProvide.value()` constructor
+
+### Use-cases
+
+#### Load a new view/page on a click
+
+```dart
+MaterialButton(
+  onPressed: () {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => BlocProvider.value(
+          value: existingCubit();     // NOT A new cubit
+          value: BlockProvider.of<yourCubitName>(context);
+          child: ....
+        )
+      )
+    )
+  }
+)
+```
+
+### Sample Repos
+
+- https://github.com/TheWCKD/blocFromZeroToHero
 
 <Footer />
