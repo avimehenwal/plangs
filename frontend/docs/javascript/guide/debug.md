@@ -20,7 +20,7 @@ You can use either of these tools to debug.
 1. learn to use browser devtools (goldstandard)
 2. vscode inbuilt debugger. Very similar to devtools. Infact vscode has chrome devtools as well
 3. JS debugger and watcher features
-4. start `console.log()` and `console.dir()`
+4. start `console.log()` and `console.dir()`. console API for details
 
 ## :football: Questions
 

@@ -14,11 +14,15 @@ tags:
 
 [Reactive Programming Streams - BLoC Patern](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/)
 
-- cubit is merged into bloc library
+cubit is now merged into bloc library
 
 ## BLoC vs flutter_block
 
 https://bloclibrary.dev/#/gettingstarted
+
+1. BloC Architecture
+2. BloC context
+3. BloC Testing
 
 ## Why BLoC?
 
@@ -30,7 +34,31 @@ https://bloclibrary.dev/#/gettingstarted
   - if data could not be fetched, show them it (re)-trying
 - STREAMS are the foundation of BLoC
   - Asynchronous code sent in parts
-- GOOD Application must have a valid STATE VALUE at all times
+
+::: tip note
+GOOD Application must have a valid STATE VALUE at all times.
+
+A **StatefulWidget** does not scale to larger applications. The BLOC pattern does.
+:::
+
+## Why Streams?
+
+```dart
+Stream<int> someStream() async* {
+  for (int i = 1; i <= 10; i++>) {
+    print("SENT number = " + i.toString());
+    await Future.delayed(Duration(seconds: 2));
+    yield i;
+  }
+}
+
+void main(List<string> args) async {
+  Stream<int> stream = boatStream();
+  stream.listen((receivedData) {
+    print("Recieved number" + receivedData.toString());
+  });
+}
+```
 
 ## Cubit
 
@@ -43,9 +71,10 @@ https://bloclibrary.dev/#/gettingstarted
 - BLoC also recieves stream of events and emits stream of states
 - To use BLoc or cubit, you first have to declare it.
 
-```dart
-
-```
+| difference | description                                              |
+| ---------- | -------------------------------------------------------- |
+| Cubit      | streaming states + Functions events that are NOT streams |
+| BloC       | streaming states + Streaming events                      |
 
 ## BLoC Widget
 
@@ -54,14 +83,31 @@ https://bloclibrary.dev/#/gettingstarted
   - same idea as React.contenxt Provide API
 - Wrap the **EXACT** part to be re-built inside the `BlocBuilder`
 
-| bloc          | description                                             |
-| ------------- | ------------------------------------------------------- |
-| BlockProvider | Accessable with a Widget tree                           |
-| BlockBuilder  | re build the UI on state change                         |
-| BlockListener | only listen for change, single time unlike BlockBuilder |
-| BlocConsumer  | mixture of BlockListener and BlockProvider              |
+### Flutter BloC Concepts
+
+| bloc          | description                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| BlockProvider | Accessable with a Widget tree, Dependency Injection in BloC Tree |
+| BlockBuilder  | re build the UI on state change                                  |
+| BlockListener | only listen for change, single time unlike BlockBuilder          |
+| BlocConsumer  | mixture of BlockListener and BlockProvider                       |
+
+- BlockProvider are created lazily
+- to access use `BlockProvider.of<myCubit>(context).myFunction();`
+- Annotate required sates as `@required`
+- Wrap only the part yu want to update inside `BlockBuilder<myCubit, myState>()`
+- `BlockListener<myCubit, myState>(listener: () {})` on top of BlockBuilder
+  - `BlocConsumer(lstener: ..., builder: ...)`
+  - The listener is guaranteed to only be called once for each state change unlike the builder in BlocBuilder.
+- Repository -> classes which provides dart to Data Layer DAL
+  - transformations like filter, sort before passing data to BloC
+- Local vs Route BloC Access
 
 ## Steps
+
+::: tip When to BloC?
+Every dynamic feature in app should have its own BloC
+:::
 
 1. Define a block by overriding its methods and then initialize it by calling its super
 2. Register Events on BloC using `on` API
@@ -199,6 +245,17 @@ MaterialButton(
   }
 )
 ```
+
+#### Search and filter items widget
+
+as the user type. Use debounce feature to wait for sometime before making API call
+
+- https://levelup.gitconnected.com/github-search-and-bloc-523d51848c68
+
+## Best Practises
+
+- keep BloC in seperate file for testability
+- write BloC per feature
 
 ### Sample Repos
 
