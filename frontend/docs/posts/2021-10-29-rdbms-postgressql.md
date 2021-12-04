@@ -2,7 +2,7 @@
 title: rdbms-postgressql
 date: 2021-10-29
 tags:
-  - anime
+  - rdbms
 featuredimg: https://picsum.photos/800/500.webp
 author: avimehenwal
 summary: rdbms-postgressql
@@ -38,5 +38,11 @@ Join table per relationship type is an improvement over polymorphic joins, but a
 
 - Missing join Resources, wrong/incorrect key when referential integrity is NOT enforced by Fk
   - A resource can be missing an acl and an acl can point to a missing resource.
+
+## Web Frameworks Benchmarks
+
+ASGI >> WSGI
+
+- https://www.techempower.com/benchmarks/
 
 <Footer />
